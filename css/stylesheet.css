@@ -52,6 +52,7 @@ header h1 {
     color: #fff;
     font-family: 'Work Sans', 'Arial', sans-serif;
     text-align: center;
+    padding: 50px;
 }
 
 .nav-links a:nth-child(1) {

@@ -1,3 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #383838;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, max-content);
+    grid-template-areas: 
+        "header"
+        "links"
+        "faq"
+        "footer";
+}
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(img/rings.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    grid-area: header;
+}
+
 h1 {
-	font-family: 'Tangerine', cursive;
+    font-weight: 200;
+    color: #fff;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    text-align: center;
+}
+
+.nav-links {
+    grid-area: links;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 200px 200px auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Work Sans', 'Arial', sans-serif;
+}
+
+.nav-links a:nth-child(1) {
+    background-image: url(img/rings.jpg);
+}
+
+.nav-links a:nth-child(2) {
+    background-image: url(img/main.jpg);
+}
+
+.nav-links a:nth-child(3) {
+    background-image: url(img/people.jpg);
+}
+
+.nav-links a:nth-child(4) {
+    background-image: url(img/sampic.jpg);
+}
+
+.nav-links a:nth-child(5) {
+    background-image: url(img/rings.jpg);
+}
+
+.faq {
+    grid-area: faq;
+    font-family: 'Work Sans', 'Arial', sans-serif;
+    font-weight: 200;
+}
+
+.faq h2 {
+    font-weight: 200;
+    text-align: center;
+    padding: 40px;
+}
+
+.faq p:nth-child(even) {
+    padding: 10px 40px;
+}
+
+.faq p:nth-child(odd) {
+    font-family:  'Times', serif;
+    padding: 5px 40px 20px 40px;
+}
+
+footer {
+    grid-area: footer;
+    padding: 20px;
+    display: flex;
 }

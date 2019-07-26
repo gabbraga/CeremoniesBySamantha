@@ -26,7 +26,10 @@ header {
     grid-area: header;
 }
 
-header h1, header h2, header a, header p {
+header h1, 
+header h2, 
+header a, 
+header p {
     color: #fff;
     padding: 50px;
 }
@@ -44,6 +47,10 @@ header h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 200px 200px auto;
+}
+
+.nav-links div {
+    
 }
 
 .nav-links a {
@@ -89,15 +96,32 @@ header h1 {
 
 .faq p:nth-child(even) {
     padding: 10px 40px;
+    margin: 0 70px;
 }
 
 .faq p:nth-child(odd) {
     font-family:  'Times', serif;
+    
     padding: 5px 40px 20px 40px;
+    margin: 0 70px;
 }
 
 footer {
     grid-area: footer;
-    padding: 20px;
     display: flex;
+    justify-content: center;
+    font-family: 'Work Sans', 'Arial', sans-serif;
+    align-items: center;
+    background-color: #b5a0cc;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+footer img:hover {
+    transform: scale(1.20);
 }

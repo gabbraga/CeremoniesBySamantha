@@ -2,37 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #383838;
+    color: #232323;
 }
 
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(100px, max-content);
+    grid-template-rows:minmax(100px, max-content);
     grid-template-areas: 
         "header"
-        "links"
+        "celebrate"
+        "honouring"
+        "lifecycle"
         "faq"
+        "contact"
         "footer";
 }
 
 header {
+    grid-area: header;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(img/rings.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
-    grid-area: header;
 }
 
-header h1, 
-header h2, 
-header a, 
-header p {
-    color: #fff;
-    padding: 50px;
+h1, h2, h3 {
+    font-family: 'Work Sans', 'Arial', sans-serif;
+    font-weight: 200;
 }
+
 
 header h1 {
     font-weight: 200;
@@ -41,69 +40,24 @@ header h1 {
     text-align: center;
 }
 
-
-.nav-links {
-    grid-area: links;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 200px 200px auto;
+.celebrate {
+    grid-area: celebrate;
 }
 
-.nav-links div {
-    
+.honouring {
+    grid-area: honouring;
 }
 
-.nav-links a {
-    text-decoration: none;
-    background-size: cover;
-    color: #fff;
-    font-family: 'Work Sans', 'Arial', sans-serif;
-    text-align: center;
-    padding: 50px;
-}
-
-.nav-links a:nth-child(1) {
-    background-image: url(img/rings.jpg);
-}
-
-.nav-links a:nth-child(2) {
-    background-image: url(img/main.jpg);
-}
-
-.nav-links a:nth-child(3) {
-    background-image: url(img/people.jpg);
-}
-
-.nav-links a:nth-child(4) {
-    background-image: url(img/sampic.jpg);
-}
-
-.nav-links a:nth-child(5) {
-    background-image: url(img/rings.jpg);
+.lifecycle {
+    grid-area: lifecycle;
 }
 
 .faq {
     grid-area: faq;
-    font-family: 'Work Sans', 'Arial', sans-serif;
-    font-weight: 200;
 }
 
-.faq h2 {
-    font-weight: 200;
-    text-align: center;
-    padding: 40px;
-}
-
-.faq p:nth-child(even) {
-    padding: 10px 40px;
-    margin: 0 70px;
-}
-
-.faq p:nth-child(odd) {
-    font-family:  'Times', serif;
-    
-    padding: 5px 40px 20px 40px;
-    margin: 0 70px;
+.contact {
+    grid-area: contact;
 }
 
 footer {

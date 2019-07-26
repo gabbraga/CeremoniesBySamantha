@@ -17,7 +17,39 @@ body {
         "faq"
         "contact"
         "footer";
+    font-family: 'Heebo', 'Arial', sans-serif;
+    font-weight: 300;
 }
+
+/* ****************** */
+/* REUSEABLE */
+/* ****************** */
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+.button {
+    font-family: 'Heebo', 'Arial', sans-serif;
+    font-weight: 200;
+}
+
+/* ****************** */
+/* NAVIGATION */
+/* ****************** */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content:flex-end; 
+}
+
+nav a, nav img {
+    width: 30px;
+    padding: 10px;
+}
+
 
 header {
     grid-area: header;
@@ -27,6 +59,8 @@ header {
     background-position: center;
 }
 
+
+
 h1, h2, h3 {
     font-family: 'Work Sans', 'Arial', sans-serif;
     font-weight: 200;
@@ -34,7 +68,6 @@ h1, h2, h3 {
 
 
 header h1 {
-    font-weight: 200;
     letter-spacing: 1px;
     word-spacing: 5px;
     text-align: center;
@@ -52,12 +85,22 @@ header h1 {
     grid-area: lifecycle;
 }
 
+.faq img {
+    width: 100%;
+}
+
 .faq {
     grid-area: faq;
 }
 
 .contact {
     grid-area: contact;
+}
+
+.celebrate, 
+.lifecycle,
+.contact {
+    background-color: #f9f8ff;
 }
 
 footer {

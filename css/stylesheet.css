@@ -161,7 +161,7 @@ h2::after {
     grid-area: contact;
 }
 
-.contact div {
+.contact>div {
     background-color: #fff;
     padding: 40px;
     border-radius: 30px;
@@ -180,8 +180,20 @@ h2::after {
     color: #473f72;
 }
 
-.contact 
+.contact ul {
+    list-style: none;
+}
 
+.contact ul li div {
+    background-image: url(img/Icons.svg);
+    background-repeat: no-repeat;
+    background-size: 75px 75px;
+    background-position: 0px -37px;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    margin-right: 10px;
+}
 
 .celebrate, 
 .lifecycle,

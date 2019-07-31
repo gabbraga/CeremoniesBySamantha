@@ -185,7 +185,7 @@ h2::after {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: auto 2fr auto auto 2fr auto 1fr;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/images/handfasting.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/handfasting.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -298,7 +298,7 @@ h2::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(/images/groupphoto.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/groupphoto.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 200px;
@@ -316,11 +316,11 @@ h2::after {
 }
 
 .honouring a:nth-child(4) {
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(/images/ringphoto.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/ringphoto.jpg);
 }
 
 .honouring a:nth-child(6) {
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(/images/handfasting.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/handfasting.jpg);
 }
 
 .honouring p {

@@ -1,70 +1,46 @@
 /* ****************** 
    COLOUR PALETTE 
-
-#473f72
-#c6b8e0
-main text - #232323
-
 ****************** */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #232323;
+
+:root {
+    --darkpurple: #473f72;
+    --lightpurple: #c6b8e0;
+    --bgpurple: #f9f8ff;
+    --main-text: #232323;
 }
 
-/* ****************** */
+html {
+    box-sizing: border-box;
+/*    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+  font-weight: 300;
+  font-size: 22px;
+  color: var(--main-text);
+/*  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);*/
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* ****************** 
 /* CSS GRID LAYOUTS */
 /* ****************** */
 
 body {
-    display: grid;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Heebo', 'Arial', sans-serif;
     font-weight: 300;
-    grid-template-columns: 1fr;
-    grid-template-rows:minmax(100px, max-content);
-}
-
-/* CSS Grid layout for home page*/
-body.indexBody {
-    grid-template-areas: 
-        "header"
-        "celebrate"
-        "honouring"
-        "lifecycle"
-        "faq"
-        "faq-photo"
-        "contact"
-        "footer";
-}
-
-/* CSS Grid layout for about page*/
-body.aboutBody {
-    grid-template-areas: 
-        "about-header"
-        "samantha"
-        "about"
-        "couple"
-        "footer";
-}
-
-/* CSS Grid layout for services page*/
-body.serviceBody {
-    grid-template-areas: 
-        "service-header"
-        "unique"
-        "marriage"
-        "vow"
-        "elope"
-        "fees";
 }
 
 /*section flex layouts*/
 section {
     margin: 0;
-    padding: 50px 70px;
+    padding: 5% 10%;
 }
 
 .celebrate, 
@@ -74,7 +50,7 @@ section {
 .unique,
 .vow,
 .fees {
-    background-color: #f9f8ff;
+    background-color: var(--bgpurple);
 }
 
 /* ****************** */
@@ -102,10 +78,11 @@ a.button:hover {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    margin: 20px auto;
+    margin: 20px;
     grid-column: 1/4;
     grid-row: 1;
     font-size: 90%;
+    justify-self: end;
 }
 
 .home nav>div,
@@ -130,10 +107,6 @@ nav a {
     color: #c6b8e0;
 }
 
-.home a>ion-icon {
-    font-size: 22px;
-}
-
 /*facebook icon*/
 /*faq icon*/
 .home .fa-facebook,
@@ -144,6 +117,10 @@ nav a {
     font-size: 18px;
 }
 
+.home a>ion-icon {
+    font-size: 22px;
+}
+
 
 /* ****************** */
 /* HEADINGS STYLING     */
@@ -151,11 +128,7 @@ nav a {
 h1, h2, h3 {
     font-family: 'Work Sans', 'Arial', sans-serif;
     font-weight: 200;
-    color: #473f72;
-}
-
-h1, h2 {
-    align-self: center;
+    color: var(--darkpurple);
 }
 
 h3 {
@@ -164,7 +137,7 @@ h3 {
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 h2::after {
@@ -172,7 +145,7 @@ h2::after {
     border-bottom: 1px solid #473f72;
     content: "";
     width: 50%;
-    margin: 12px auto;
+    margin: 12px auto 0 auto;
 }
 
 
@@ -180,10 +153,9 @@ h2::after {
 /* HOME SECTION     */
 /* ****************** */
 
-.home {
-    grid-area: header;
+.home {    
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr max-content 1fr;
     grid-template-rows: auto 2fr auto auto 2fr auto 1fr;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/handfasting.jpg);
     background-repeat: no-repeat;
@@ -198,7 +170,7 @@ h2::after {
     text-align: center;
     margin: 30px;
     font-size: 250%;
-    grid-column: 2;
+    grid-column: 2/3;
     grid-row: 3;
 }
 
@@ -209,15 +181,15 @@ h2::after {
 
 .home a.button {
     font-family: 'Work Sans', 'Arial', sans-serif;
-    font-weight: 200;
-    font-size: 120%;
+    font-weight: 300;
+    font-size: 90%;
     border: 2px solid #c6b8e0;
     border-radius: 30px;
-    padding: 16px 20px;
+    padding: 14px 20px;
     color: #c6b8e0;
     text-align: center;
     margin: 10px auto;
-    grid-column: 2;
+    grid-column: 2/3;
     grid-row: 4;
 }
 
@@ -227,10 +199,10 @@ h2::after {
 }
 
 .home>p {
-    grid-column: 2;
+    grid-column: 2/3;
     grid-row: 6;
     padding: 20px;
-    font-size: 130%;
+    font-size: 100%;
     text-align: center;
 }
 
@@ -238,11 +210,8 @@ h2::after {
 /* CELEBRATE SECTION */
 /* ****************** */
 
-.celebrate {
-    grid-area: celebrate;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.celebrate div {    
+/*    display: grid;  */
 }
 
 .celebrate img {
@@ -255,23 +224,28 @@ h2::after {
 }
 
 .celebrate p {
-    padding: 10px;
+    padding: 16px;
 }
 
 .celebrate p a {
-    color: #473f72;
+    color: var(--lightpurple);
+}
+
+.celebrate p a:hover,
+.celebrate p a:active {
+    color: var(--darkpurple);
 }
 
 .celebrate a.button {
     font-family: 'Work Sans', 'Arial', sans-serif;
-    font-weight: 200;
-    font-size: 120%;
+    font-weight: 300;
+    font-size: 100%;
     border: 2px solid #473f72;
     border-radius: 30px;
-    padding: 16px 20px;
+    padding: 14px 20px;
     color:  #473f72;
     text-align: center;
-    margin: 10px auto;
+    margin: 30px auto;
 }
 
 
@@ -283,11 +257,17 @@ h2::after {
 
 
 /* ****************** */
-/* HONOURING SECTION */
+/* HONOURING SECTION  */
 /* ****************** */
 
 .honouring {
-    grid-area: honouring;
+    display: grid;
+}
+
+.honouring h2 {
+}
+
+.honouring div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,45 +281,66 @@ h2::after {
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/groupphoto.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     padding: 30px;
     text-align: center;
     border-radius: 50%;
 /*    border: 6px solid #473f72;*/
     margin: 20px;
-    color: #fff;
     font-size: 150%;
     color: #c6b8e0;
-    background-position: center;
-    
+    background-position: center;   
 }
 
-.honouring a:nth-child(4) {
+.honouring div:nth-child(3) a {
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/ringphoto.jpg);
 }
 
-.honouring a:nth-child(6) {
+.honouring div:nth-child(4) a {
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/handfasting.jpg);
 }
 
 .honouring p {
     text-align: center;
-    padding: 20px;
 }
 
+.honouring a.button {
+    font-family: 'Work Sans', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 90%;
+    border: 2px solid #c6b8e0;
+    border-radius: 30px;
+    padding: 14px 20px;
+    color: #c6b8e0;
+    text-align: center;
+    margin: 10px auto;
+}
+
+a.button:active,
+a.button:hover {
+    background-color: #c6b8e0;
+    color: #fff;
+}
 
 /* ****************** */
 /* LIFECYCLE SECTION */
 /* ****************** */
 
 .lifecycle {
-    grid-area: lifecycle;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr [content-start] 4 [content-end] 1fr;
+    grid-template-rows: 1fr auto auto 1fr;
 }
 
-.lifecycle p {
-    padding: 10px;
+.lifecycle h2 {
+    grid-row: 2;
+    grid-column: content-start / content-end;
+}
+
+.lifecycle div {
+    grid-row: 3;
+    grid-column: 2;
 }
 
 
@@ -348,11 +349,7 @@ h2::after {
 /* ****************** */
 
 .faq {
-    grid-area: faq; 
-}
-
-.faq img {
-    width: 100%;
+    display: grid;
 }
 
 .faq h3 {
@@ -363,7 +360,6 @@ h2::after {
 .faq p {
     padding-bottom: 4px;
     text-align: left;
-    align-self: flex-start;
 }
 
 .faq p {
@@ -371,7 +367,6 @@ h2::after {
 }
 
 body>img {
-    grid-area: faq-photo;
     width: 100%;
 }
 
@@ -380,7 +375,6 @@ body>img {
 /* ****************** */
 
 .contact {
-    grid-area: contact;
     display: grid;
 }
 
@@ -403,14 +397,9 @@ body>img {
     padding-bottom: 10px;
 }
 
-.contact p {
-    align-self: flex-start;
-}
-
 .contact ul {
     list-style: none;
     margin-bottom: 20px;
-    align-self: flex-start;
 }
 
 .contact ul ion-icon {
@@ -434,11 +423,9 @@ body>img {
 /* ****************** */
 
 .aboutBody header {
-    grid-area: about-header;
 }
 
 .portrait {
-    grid-area: samantha;
 }
 
 .portrait img {
@@ -447,7 +434,6 @@ body>img {
 }
 
 .about {
-    grid-area: about;
 }
 
 .about p {
@@ -455,7 +441,6 @@ body>img {
 }
 
 .couple {
-    grid-area: couple;
 }
 
 /* ****************** */
@@ -463,28 +448,22 @@ body>img {
 /* ****************** */
 
 .serviceBody header {
-    grid-area: service-header;
 }
 
 .unique {
-    grid-area: unique;
 }
 
 .marriage {
-    grid-area: marriage;
 }
 
 .vow {
-    grid-area: vow;
 }
 
 .elope {
-    grid-area: elope;
     align-items: flex-start;
 }
 
 .fees {
-    grid-area: fees;
     align-items: flex-start;
 }
 
@@ -506,7 +485,7 @@ body>img {
 /* ****************** */
 
 footer {
-    grid-area: footer;
+    display: grid;
     background-color: #473f72;
     height: 60px;
 }

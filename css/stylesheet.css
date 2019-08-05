@@ -12,11 +12,10 @@
 
 html {
     box-sizing: border-box;
-/*    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
-  font-weight: 300;
-  font-size: 22px;
-  color: var(--main-text);
-/*  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);*/
+    font-family: 'Heebo', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--main-text);
 }
 
 *,
@@ -31,16 +30,11 @@ html {
 /* CSS GRID LAYOUTS */
 /* ****************** */
 
-body {
-    font-size: 20px;
-    font-family: 'Heebo', 'Arial', sans-serif;
-    font-weight: 300;
-}
 
 /*section flex layouts*/
 section {
     margin: 0;
-    padding: 5% 10%;
+    padding: 6vh 26vw 8vh 26vw;
 }
 
 .celebrate, 
@@ -54,8 +48,42 @@ section {
 }
 
 /* ****************** */
+/* HEADINGS STYLING     */
+/* ****************** */
+h1, h2, h3 {
+    font-family: 'Work Sans', 'Arial', sans-serif;
+    font-weight: 200;
+    color: var(--darkpurple);
+    text-align: center;
+}
+
+h3 {
+    font-size: 110%;
+    padding-bottom: 5px;
+}
+
+h2 {
+    padding-bottom: 30px;
+}
+
+h2::after {
+    display: block;
+    border-bottom: 1px solid #473f72;
+    content: "";
+    width: 50%;
+    margin: 12px auto 0 auto;
+}
+
+
+/* ****************** */
 /* BUTTONS */
 /* ****************** */
+
+a.button {
+    width: max-content;
+    display: block;
+    margin: 0px auto;
+}
 
 a:link,
 a:visited {
@@ -68,21 +96,75 @@ a.button:hover {
     color: #fff;
 }
 
+/* ****************** */
+/* HOME SECTION     */
+/* ****************** */
+
+.home {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/handfasting.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.home h1 {
+    letter-spacing: -1px;
+    word-spacing: 5px;
+    text-align: center;
+    font-size: 8vh;
+    grid-column: 2/3;
+    grid-row: 3;
+    padding: 20px;
+}
+
+.home h1,
+.home p {
+    color: #fff;
+}
+
+.home a.button {
+    font-family: 'Work Sans', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 90%;
+    border: 2px solid #c6b8e0;
+    border-radius: 30px;
+    padding: 14px 20px;
+    color: #c6b8e0;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.home a.button:active,
+.home a.button:hover {
+    color: #fff;
+}
+
+.home>p {
+    font-size: 3vh;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
 
 /* ****************** */
 /* NAVIGATION     */
 /* ****************** */
 
 .home nav {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     margin: 20px;
-    grid-column: 1/4;
-    grid-row: 1;
     font-size: 90%;
-    justify-self: end;
 }
 
 .home nav>div,
@@ -121,110 +203,30 @@ nav a {
     font-size: 22px;
 }
 
-
-/* ****************** */
-/* HEADINGS STYLING     */
-/* ****************** */
-h1, h2, h3 {
-    font-family: 'Work Sans', 'Arial', sans-serif;
-    font-weight: 200;
-    color: var(--darkpurple);
-}
-
-h3 {
-    padding-bottom: 5px;
-}
-
-h2 {
-    text-align: center;
-    margin: 20px;
-}
-
-h2::after {
-    display: block;
-    border-bottom: 1px solid #473f72;
-    content: "";
-    width: 50%;
-    margin: 12px auto 0 auto;
-}
-
-
-/* ****************** */
-/* HOME SECTION     */
-/* ****************** */
-
-.home {    
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: auto 2fr auto auto 2fr auto 1fr;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/handfasting.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;   
-}
-
-.home h1 {
-    letter-spacing: 1px;
-    word-spacing: 5px;
-    text-align: center;
-    margin: 30px;
-    font-size: 250%;
-    grid-column: 2/3;
-    grid-row: 3;
-}
-
-.home h1,
-.home p {
-    color: #fff;
-}
-
-.home a.button {
-    font-family: 'Work Sans', 'Arial', sans-serif;
-    font-weight: 300;
-    font-size: 90%;
-    border: 2px solid #c6b8e0;
-    border-radius: 30px;
-    padding: 14px 20px;
-    color: #c6b8e0;
-    text-align: center;
-    margin: 10px auto;
-    grid-column: 2/3;
-    grid-row: 4;
-}
-
-.home a.button:active,
-.home a.button:hover {
-    color: #fff;
-}
-
-.home>p {
-    grid-column: 2/3;
-    grid-row: 6;
-    padding: 20px;
-    font-size: 100%;
-    text-align: center;
-}
-
 /* ****************** */
 /* CELEBRATE SECTION */
 /* ****************** */
 
 .celebrate div {    
-/*    display: grid;  */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    padding: 40px;
+    grid-gap: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .celebrate img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    border: 6px solid #473f72;
-    margin: 20px;
-    position: center;
+    border: 1px solid #473f72;
+    justify-self: center;
+    padding: 5px;
 }
 
 .celebrate p {
-    padding: 16px;
+    text-align: justify;
 }
 
 .celebrate p a {
@@ -238,14 +240,11 @@ h2::after {
 
 .celebrate a.button {
     font-family: 'Work Sans', 'Arial', sans-serif;
-    font-weight: 300;
-    font-size: 100%;
     border: 2px solid #473f72;
     border-radius: 30px;
     padding: 14px 20px;
     color:  #473f72;
     text-align: center;
-    margin: 30px auto;
 }
 
 
@@ -260,14 +259,17 @@ h2::after {
 /* HONOURING SECTION  */
 /* ****************** */
 
-.honouring {
+.honouring>div {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    grid-gap: 40px;
+    margin: 30px;
+    justify-content: center;
+    
 }
 
-.honouring h2 {
-}
-
-.honouring div {
+.honouring div div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -278,31 +280,30 @@ h2::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/groupphoto.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/groupphoto.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 150px;
-    height: 150px;
-    padding: 30px;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
     text-align: center;
     border-radius: 50%;
-/*    border: 6px solid #473f72;*/
-    margin: 20px;
-    font-size: 150%;
+    border: 1px solid #473f72;
+    font-size: 130%;
     color: #c6b8e0;
     background-position: center;   
 }
 
-.honouring div:nth-child(3) a {
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/ringphoto.jpg);
+.honouring>div div:nth-child(2) a {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/ringphoto.jpg);
 }
 
-.honouring div:nth-child(4) a {
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/handfasting.jpg);
+.honouring>div div:nth-child(3) a {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/handfasting.jpg);
 }
 
 .honouring p {
-    text-align: center;
+    text-align: left;
 }
 
 .honouring a.button {
@@ -314,7 +315,6 @@ h2::after {
     padding: 14px 20px;
     color: #c6b8e0;
     text-align: center;
-    margin: 10px auto;
 }
 
 a.button:active,
@@ -323,83 +323,81 @@ a.button:hover {
     color: #fff;
 }
 
-/* ****************** */
-/* LIFECYCLE SECTION */
-/* ****************** */
+/* **************************/
+/* LIFECYCLE & FAQ SECTION  */
+/* **************************/
 
-.lifecycle {
-    display: grid;
-    grid-template-columns: 1fr [content-start] 4 [content-end] 1fr;
-    grid-template-rows: 1fr auto auto 1fr;
+.lifecycle p:first-child {
+    padding-bottom: 20px;
 }
 
-.lifecycle h2 {
-    grid-row: 2;
-    grid-column: content-start / content-end;
-}
-
-.lifecycle div {
-    grid-row: 3;
-    grid-column: 2;
-}
-
-
-/* ****************** */
-/* FAQ SECTION */
-/* ****************** */
-
-.faq {
-    display: grid;
+.lifecycle p,
+.faq p {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: justify;
 }
 
 .faq h3 {
-    font-size: 110%;
-}
-
-.faq h3,
-.faq p {
-    padding-bottom: 4px;
-    text-align: left;
+    text-align: justify;
 }
 
 .faq p {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+.faq p:last-child {
+    padding-bottom: 0px;
 }
 
 body>img {
     width: 100%;
+    margin: 0;
 }
 
 /* ****************** */
 /* CONTACT SECTION */
 /* ****************** */
 
-.contact {
+.contact>div{
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-flow: dense;
+    grid-gap: 30px;
+    margin: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
-.contact>div {
+.contact-info {
     background-color: #fff;
     padding: 32px;
     border-radius: 30px;
-    margin: 30px
+    grid-column-end: -1;
+    min-width: min-content;
 }
 
-.contact div p:first-of-type {
+.contact-info p:nth-child(even), 
+.contact-info p:first-child {
+    font-family: 'Work Sans', 'Arial', sans-serif;
+    color: #473f72;
+}
+.contact-info p:first-child {
     border-bottom: 1px solid #473f72;
     text-align: center;
     font-size: 130%;
+    margin-bottom: 20px;
 }
 
-.contact div p {
-    font-family: 'Work Sans', 'Arial', sans-serif;
-    color: #473f72;
-    padding-bottom: 10px;
+.contact-info p {
+    padding: 0px 14px;
 }
 
+.contact>div div:last-child {
+    grid-column: 1;
+}
 .contact ul {
     list-style: none;
-    margin-bottom: 20px;
 }
 
 .contact ul ion-icon {
@@ -416,6 +414,11 @@ body>img {
 
 .contact ion-icon {
     color: #473f72;
+}
+
+.contact>p:last-child {
+    grid-row-end: -1;
+    grid-column: 1/-1;
 }
 
 /* ****************** */

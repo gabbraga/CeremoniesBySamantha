@@ -6,9 +6,9 @@
     --darkpurple: #381860;
     --lightpurple:#6b4b95 ;
     --bgpurple: #e5ddef;
-    --main-text: #232323;
-    --main-font: 'Heebo';
-    --headings: 'Work Sans';
+    --main-text: rgba(39, 39, 39, 0.96);
+    --main-font: 'Roboto+Slab';
+    --headings: 'Montserrat';
     --footerpurple: #31273c;
 }
 
@@ -43,7 +43,6 @@ section {
 .fees {
     background-color: var(--bgpurple);
 }
-
 
 /* ****************** */
 /* HEADINGS STYLING     */
@@ -85,7 +84,7 @@ h2::after {
 
 .button {
     font-family: var(--headings), 'Arial', sans-serif;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 120%;
     text-align: center;
     
@@ -115,15 +114,15 @@ a:visited {
     text-decoration: none;
 }
 
-.button:hover,
-.button:active {
+a.button:hover,
+a.button:active {
     background-color: var(--lightpurple);
     color: #fff;
     transform: scale(1.08);
 }
 
-.button--dark:hover,
-.button--dark:active {
+a.button--dark:hover,
+a.button--dark:active {
     background-color: var(--darkpurple);
 }
 
@@ -133,7 +132,8 @@ a:visited {
 
 p {
     padding: 10px;
-    text-align: justify;
+    text-align: left;
+    line-height: 140%;
 }
 
 /***********************/
@@ -143,10 +143,15 @@ p {
 header {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: var(--bgpurple);
     margin: 0;
     width: 100%;
+}
+
+.logo_name {
+    max-width: 200px;
+    margin: 20px;
 }
 
 nav ul {
@@ -187,12 +192,6 @@ nav a:hover,
     font-size: 22px;
 }
 
-.nav--hero {
-    grid-row: 1;
-    grid-column: 2;
-    justify-self: end;
-}
-
 /* ****************** */
 /* HERO SECTION     */
 /* ****************** */
@@ -209,11 +208,17 @@ nav a:hover,
     height: 100vh;
 }
 
+.nav--hero {
+    grid-row: 1;
+    grid-column: 2;
+/*    justify-self: end;*/
+}
+
 .hero h1 {
     letter-spacing: -1px;
     word-spacing: 10px;
     text-align: center;
-    font-size: 8vh;
+    font-size: 6vw;
     grid-column: 2/3;
     grid-row: 3;
     padding: 20px;
@@ -262,12 +267,13 @@ nav a:hover,
     justify-self: center;
 }
 
-.celebrate p a {
+.celebrate a.button {
     color: var(--lightpurple);
+    
 }
 
-.celebrate p a:hover,
-.celebrate p a:active {
+.celebrate a.button:hover,
+.celebrate a.button:active {
     color: var(--darkpurple);
 }
 
@@ -313,7 +319,7 @@ nav a:hover,
     color: #fff;
     width: 100%;
     height: 100%;
-    font-size: 150%;
+    font-size: 140%;
     border-radius: 10px;
     transform: scale(1.2);
     transition: transform 250ms;
@@ -353,7 +359,6 @@ nav a:hover,
     padding: 0;
     text-align: center;
     margin-top: 20px;
-    font-size: 110%;
 }
 
 /* **************************/
@@ -483,16 +488,13 @@ nav a:hover,
     font-size: 0.5em;
     font-weight: 400;
     display: block;
-    text-align: center;
-    padding: 5px;
     text-align: left;
     font-size: 0.4em;
 }
 
 .aboutBody h1 {
-    width: 300px;
+    width: max-content;
     font-size: 3em;
-    text-align: right;
     margin: 20px auto;
 }
 
@@ -549,13 +551,39 @@ nav a:hover,
     font-size: 3em;
     text-align: right;
     color: #fff;
-    
+}
+
+.marriage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-gap: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle--img--services {
 /*    border: 6px solid var(--lightpurple);*/
 }
 
+.marriage h2 {
+    grid-column: 2;
+    grid-row:1;
+}
+
+.marriage h3 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.marriage img {
+    grid-row: span 2;
+    grid-column: span 1;
+}
+
+.marriage p {
+    grid-column: 2;
+    grid-row: 2;
+}
 /* ****************** */
 /* FOOTER  */
 /* ****************** */

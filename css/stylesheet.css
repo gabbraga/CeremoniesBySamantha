@@ -154,18 +154,34 @@ header nav ul {
 }
 
 header .logo {
+    margin: 1em;
     display: flex;
-    align-items: center;
 }
 
 .logo_sr {
-    width: 20px;
-    margin-right: 5px;
+    width: 60px;
+    margin-right: 0.8em;
+}
+
+.logo_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lcc {
+    font-family: var(--headings);
+    color: var(--lightpurple);
+    text-transform: lowercase;
+    letter-spacing: 0.6px;
+    margin: 0;
+    padding: 0;
 }
 
 .logo_name {
-    width: 250px;
-    padding: 12px;
+    margin: 0;
+    margin-bottom: 0.5em;
+    width: 300px;
 }
 
 ul {
@@ -239,11 +255,9 @@ nav li a:active,
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-/*    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url(../images/handfasting.jpg);*/
+    background-color: var(--main-text);
     background-image: url(../images/handfasting.jpg);
-    background-color: #454257;
-    background-blend-mode: multiply;
+    background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -281,7 +295,7 @@ section.hero {
 }
 
 .hero h1,
-.hero p {
+.subtitle {
     color: rgba(255,255,255,0.9);
 }
 
@@ -290,6 +304,7 @@ section.hero {
     background-color: var(--darkpurple);
     border: none;
     font-size: 1rem;
+    margin: 2em;
 }
 
 .hero .subtitle {
@@ -425,6 +440,44 @@ section.hero {
 /* LIFECYCLE & WILD SECTION  */
 /* **************************/
 
+.reg {
+    font-size: 0.7em;
+}
+
+.lifecycle-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.celebrant-logo-flex {
+    max-width: min-content;
+    margin-right: 1em;
+}
+
+.celebrant-logo {
+    display: block;
+    width: 180px;
+    background: rgba(255,255,255,0.7);
+    padding: 1.5em;
+    border-radius: 24px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                    0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    margin: 1.5em;  
+    margin-top: 10px;
+}
+
+.celebrant-logo-flex p {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 1em;
+}
+
+.celebrant-link {
+    color: cadetblue;
+}
+
 .lifecycle p,
 .wild p {
     max-width: 900px; 
@@ -483,7 +536,7 @@ section.hero {
 }
 
 .contact-info p:first-child {
-/*    text-align: center;*/
+    text-align: center;
     font-size: 1.4rem;
     margin-bottom: 0.5em;
 }

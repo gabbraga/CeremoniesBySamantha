@@ -38,7 +38,7 @@ html {
 
 section {
     margin: 0;
-    padding: 8vh 15vw 8vh 15vw;
+    padding: 8vh 8vw 8vh 8vw;
 }
 
 .celebrate, 
@@ -167,6 +167,7 @@ header .logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .lcc {
@@ -243,6 +244,10 @@ nav li a:active,
     
     header nav ul {
         flex-direction: row;
+    }
+    
+    .logo_group {
+        align-items: flex-start;
     }
 }
 
@@ -446,41 +451,66 @@ section.hero {
 
 .lifecycle-flex {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lifecycle-flex a {
+    order: 2;
 }
 
 .celebrant-logo-flex {
-    max-width: min-content;
-    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+    background: rgba(255,255,255,0.8);
+    border-radius: 24px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                    0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                    0 2px 2px -2px rgba(0, 0, 0, 0.2);
+    width: 220px;
+    padding: 2em 0;
+    transition: transform 250ms;
+}
+
+.celebrant-logo-flex:hover {
+    transform: scale(1.05);
 }
 
 .celebrant-logo {
     display: block;
-    width: 180px;
-    background: rgba(255,255,255,0.7);
-    padding: 1.5em;
-    border-radius: 24px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-                    0 1px 5px 0 rgba(0, 0, 0, 0.12),
-                    0 3px 1px -2px rgba(0, 0, 0, 0.2);
-    margin: 1.5em;  
-    margin-top: 10px;
-}
-
-.celebrant-logo-flex p {
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 0 1em;
+    width: 55%;
 }
 
 .celebrant-link {
-    color: cadetblue;
+    text-align: center;
+    padding: 1.5em 1em 0;
+    color: #215052;
+    line-height: 1.8;
+    font-size: 0.8rem;
+    font-family: var(--headings);
 }
 
-.lifecycle p,
+@media (min-width: 900px) {
+    .lifecycle-flex {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .celebrant-logo-flex {
+        margin-top: 1em;
+        margin-left: 2em;
+    }
+}
+
+.lifecycle p {
+    max-width: 600px;   
+}
+
 .wild p {
-    max-width: 900px; 
+    max-width: 800px; 
     margin: 0 auto;
 }
 
@@ -498,8 +528,10 @@ section.hero {
 }
 
 .wild-icons>img {
+    max-width: 140px;
     padding: 10px;
 }
+
 
 /* ****************** */
 /* CONTACT SECTION */
@@ -647,8 +679,18 @@ section.hero {
     padding: 10px;
 }
 
+.couple h2,
+.couple p {
+    margin-left: auto;
+    margin-right: auto;
+}
 .couple h2 {
-    font-size: 1.5rem;
+    max-width: 500px;
+    font-size: 1.4rem;
+}
+
+.couple p {
+    max-width: 700px;
 }
 
 /* ****************** */
@@ -689,7 +731,7 @@ section.hero {
 }
 
 .unique>div,
-.marriage>div,
+.marriage-main,
 .vow>div,
 .elope>div,
 .fees>div {
@@ -697,37 +739,49 @@ section.hero {
     max-width: 800px;
 }
 
-.marriage {
-/*    display: grid;*/
-/*    grid-template-columns: repeat(auto-fit, minmax(300px, auto));*/
-/*    grid-gap: 30px;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
+.marriage-icons-title {
+    text-align: center;
+    margin-bottom: 1em;
 }
 
-.circle--img--services {
-/*    border: 6px solid var(--lightpurple);*/
+.marriage-icons {
+    margin: 1em auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    max-width: 1000px;
+    flex-wrap: wrap;
 }
 
-.marriage h2 {
-/*    grid-column: 2;*/
-/*    grid-row:1;*/
+.marriage-card {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    align-items: center;
+    margin: 0.5em;
 }
 
-.marriage h3 {
-/*    grid-column: 2;*/
-/*    grid-row: 2;*/
+.marriage-card img {
+    width: 80%;
 }
 
-.marriage img {
-/*    grid-row: span 2;*/
-/*    grid-column: span 1;*/
+.marriage-card p:last-child {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.5em;
 }
 
-.marriage p {
-/*    grid-column: 2;*/
-/*    grid-row: 2;*/
+.marriage-card-title {
+    font-size: 1rem;
+    font-family: var(--headings);
+    color: var(--darkpurple);
+    text-align: center;
+    padding: 1em;
+    padding-bottom: 0.5em;
 }
+
+
+
 /* ****************** */
 /* FOOTER  */
 /* ****************** */

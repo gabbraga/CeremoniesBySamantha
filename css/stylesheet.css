@@ -51,9 +51,13 @@ section {
     background-color: var(--bgpurple);
 }
 
+
+
+
 /* ****************** */
 /* HEADINGS STYLING     */
 /* ****************** */
+
 h1, h2, h3 {
     font-family: var(--headings), 'Arial', sans-serif;
     font-weight: 200;
@@ -85,6 +89,9 @@ h3 {
     text-align: left;
 }
 
+
+
+
 /* ****************** */
 /* BUTTONS */
 /* ****************** */
@@ -103,10 +110,10 @@ h3 {
     
     display: block;
     width: max-content;
-    margin: 0px auto;
-    padding: 0.6em 1em;
+    margin: 0 auto;
+    padding: 0.5em 1em;
     
-    transition: transform 250ms;
+    transition: color 250ms;
 }
 
 a:link,
@@ -119,6 +126,10 @@ a:visited {
     background-color: var(--darkpurple);
     color: #fff;
 }
+
+
+
+
 
 /************** */
 /* Body Text    */
@@ -133,8 +144,11 @@ p {
     text-align: left;
 }
 
+
+
+
 /*************************************/
-/* HEADER, NAVIGATION, SOCIAL LINKS */
+/* HEADER, NAVIGATION */
 /************************************/
 
 header {
@@ -153,41 +167,93 @@ header nav ul {
     max-width: max-content;
 }
 
-header .logo {
-    margin: 1em;
+
+
+
+/*************************************/
+/* HEADER, LOGO */
+/************************************/
+
+.logo {
     display: flex;
+    margin: 1em;
+    align-items: center;
+    width: 100%;
+}
+
+.logo--hero {
+    max-width: 400px;
 }
 
 .logo_sr {
-    width: 60px;
-    margin-right: 0.8em;
+    height: 30px;
 }
 
-.logo_group {
+.logo_sr--hero {
+    height: 65px;
+}
+
+.logo_group--hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.logo_name {
+    width: 250px;
+    margin: 0;
+}
+
+.logo_name--hero {
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.lcc::before {
+    content: "|";
+    display: inline;
+    font-size: 1.4rem;
+    margin-right: 5px;
 }
 
 .lcc {
     font-family: var(--headings);
-    color: var(--lightpurple);
+    color: var(--darkpurple);
     text-transform: lowercase;
     letter-spacing: 0.6px;
     margin: 0;
+    margin-left: 0.5em;
     padding: 0;
+    min-width: max-content;
+    font-size: 0.9rem;
+    line-height: 1;
 }
 
-.logo_name {
-    margin: 0;
-    margin-bottom: 0.5em;
-    width: 300px;
+
+.lcc--hero::before {
+    display: none;
 }
+
+.lcc--hero {
+    color: var(--lightpurple);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+
+
+/*************************************/
+/* HEADER, SOCIAL LINKS */
+/************************************/
 
 ul {
     list-style: none;
     padding: 0;
+    
 }
 
 nav li {
@@ -195,6 +261,7 @@ nav li {
     color: var(--darkpurple);
 /*    white-space: nowrap;*/
     text-transform: lowercase;
+    
 }
 
 nav li a,
@@ -228,12 +295,17 @@ nav li a:active,
     display: flex;
     align-items: center;
     margin: 0;
+    
 }
 
 .social-links ion-icon {
     display: block;
     margin: 5px;
     color: var(--darkpurple);
+}
+
+.social-links--hero ion-icon {
+    color: var(--lightpurple);
 }
 
 @media (min-width: 800px) {
@@ -275,7 +347,9 @@ section.hero {
 }
 
 .hero header {
+    margin-bottom: 3em;
     background-color: transparent;
+    align-items: flex-start;
 }
 
 .hero>div {
@@ -283,14 +357,17 @@ section.hero {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 2em;  
+    margin: 1em;  
 }
 
 .hero h1 {
-    word-spacing: 10px;
-    font-size: 5rem;
+    word-spacing: 5px;
+    font-size: 3rem;
     max-width: max-content;
-    line-height: 1.2;
+}
+
+.nav--hero {
+    margin: 0.8em;
 }
 
 .nav--hero a,
@@ -301,15 +378,23 @@ section.hero {
 
 .hero h1,
 .subtitle {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,0.7);
 }
 
 .button--hero {
-    color: rgba(255,255,255,0.9);
-    background-color: var(--darkpurple);
-    border: none;
-    font-size: 1rem;
-    margin: 2em;
+    color: var(--lightpurple);
+    border: var(--lightpurple) 2px solid;
+    font-size: 1.3rem;
+    margin: 3em auto 1em;
+    box-shadow: none;
+}
+
+.button--hero:hover,
+.button--hero:active,
+.button--hero:focus {
+    color: var(--darkpurple);
+    border: var(--lightpurple) 2px solid;
+    background-color: var(--lightpurple);
 }
 
 .hero .subtitle {
@@ -319,9 +404,27 @@ section.hero {
     text-align: inherit;
 }
 
+.nav--hero {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    .hero h1 {
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        font-size: 5rem;
+        max-width: max-content;
+    }
+    
+    .button--hero {
+        font-size: 1.1rem;
+    }
+}
+
 @media (min-width: 800px) {
-    .hero header {
-        margin-bottom: 100px;
+
+    .nav--hero {
+        display: flex;
     }
 }
 
@@ -339,16 +442,13 @@ section.hero {
     max-width: 900px;
 }
 
-.circle--img {
-    width: 260px;
-    height: 260px;
+.sam--pic {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 /*    border: 1px solid var(--darkpurple);*/
     padding: 0px;
     object-fit: cover;
-}
-
-.sam--pic {
     object-position: 0 -30px;
     justify-self: center;
 }
@@ -366,31 +466,61 @@ section.hero {
 }
 
 .honouring>div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    justify-content: center;
-    align-items: flex-start;
-    grid-gap: 30px;
+/*    display: grid;*/
+/*    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
+/*    grid-gap: 30px;*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-wrap: wrap;
     margin: 50px auto;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 
-.honouring .card {
+.honouring-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    max-width: 300px;
+    max-width: 250px;
+    max-height: 300px;
     justify-self: center;
+    align-items: center;
+    margin: 1em;
 }
 
+.honouring-card-img {
+    width: 50%;
+}
+
+.honouring-card-title,
+.honouring-card-body {
+    text-align: center;
+    padding: 1em;
+}
+
+.honouring-card-title {
+    font-size: 1.2rem;
+    font-family: var(--headings);
+    color: var(--darkpurple);
+    padding-bottom: 0;
+    font-weight: 700;
+}
+
+.honouring-card-body {
+    font-size: 0.9rem;
+    padding-top: 0.5em;
+}
+
+
+/*
 .honouring .service-links {
     width: 100%;
     height: 200px;
     overflow: hidden;
     border-radius: 10px;
 }
+*/
 
+/*
 .honouring .service-links a {
     display: flex;
     align-items: center;
@@ -405,7 +535,9 @@ section.hero {
     transition: transform 250ms;
     text-align: center;
 }
+*/
 
+/*
 .honouring .service-links a::before {
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/groupphoto.jpg);
     background-repeat: no-repeat;
@@ -418,28 +550,30 @@ section.hero {
     height: 100%;
     z-index: -1;
 }
+*/
 
 
+/*
 .honouring .service-links a:hover {
     transform: scale(1);
 }
+*/
 
+/*
 
 .honouring .card:nth-child(2) a::before {
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/ringphoto.jpg);
     background-position: center;
 }
+*/
 
+/*
 .honouring .card:nth-child(3) a::before {
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/handfasting.jpg);
     background-position: center;
 }
+*/
 
-.honouring p {
-    padding: 0;
-    text-align: center;
-    margin-top: 20px;
-}
 
 /* **************************/
 /* LIFECYCLE & WILD SECTION  */
@@ -519,7 +653,7 @@ section.hero {
 }
 
 .wild-icons {
-    margin: auto 10px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -702,6 +836,7 @@ section.hero {
     align-items: center;
     justify-content: center;
     height: 70vh;
+    max-height: 400px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/handfasting.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -730,13 +865,11 @@ section.hero {
     padding: 10px;
 }
 
-.unique>div,
 .marriage-main,
-.vow>div,
-.elope>div,
+.unique>div,
 .fees>div {
     margin: 30px auto;
-    max-width: 800px;
+    max-width: 700px;
 }
 
 .marriage-icons-title {
@@ -780,6 +913,52 @@ section.hero {
     padding-bottom: 0.5em;
 }
 
+
+.vow-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    font-size: 0.95rem;
+    margin: 0 auto;
+}
+
+.vow-main h3 {
+    font-size: 1.3rem;
+    padding: 0 10px 0;
+}
+
+.vow-main p {
+    padding: 0;
+    margin: 10px;
+}
+
+.services-img--vow {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin: 1.5em;
+}
+
+@media (min-width: 800px) {
+    .vow-main {
+        font-size: 1rem;
+        flex-direction: row;
+        max-width: 800px;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .vow-main h3 {
+        font-size: 1.3rem;
+        padding: 0 1rem 0;
+    }
+
+    .vow-main p {
+        padding: 0;
+        margin: 1rem;
+    }
+}
 
 
 /* ****************** */
@@ -841,4 +1020,8 @@ footer nav ion-icon {
 
 .footer-nav {
     display: flex;
+}
+
+nav a {
+    color: var(--darkpurple);
 }

@@ -16,7 +16,6 @@
 /*    --main-font: 'Roboto+Slab';*/
     --main-font: 'Bangla Sangham MN';
     --headings: 'Montserrat';
-    --footerpurple: #31273c;
 }
 
 
@@ -176,7 +175,9 @@ header nav ul {
 
 .logo {
     display: flex;
-    margin: 1em;
+    /*big screen margin*/
+/*    margin: 1em;*/
+    margin: 1em auto;
     align-items: center;
     width: 100%;
 }
@@ -190,7 +191,9 @@ header nav ul {
 }
 
 .logo_sr--hero {
-    height: 65px;
+    /*big screen height*/
+/*    height: 65px;*/
+    height: 50px;
 }
 
 .logo_group--hero {
@@ -199,6 +202,7 @@ header nav ul {
     justify-content: center;
     width: 100%;
     padding: 10px;
+    padding-right: 0;
 }
 
 .logo_name {
@@ -321,6 +325,10 @@ nav li a:active,
     .logo_group {
         align-items: flex-start;
     }
+}
+
+nav a {
+    color: var(--darkpurple);
 }
 
 
@@ -474,8 +482,9 @@ section.hero {
     align-items: baseline;
     flex-wrap: wrap;
     margin: 50px auto;
+    /*big screen maxes*/
     max-width: 1000px;
-    max-height: 400px;
+/*    max-height: 400px;*/
 }
 
 .honouring-card {
@@ -691,7 +700,9 @@ section.hero {
     flex-direction: column;
     
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 1.6em 2em;
+    /*big screen padding*/
+/*    padding: 1.6em 2em;*/ 
+    padding: 1em 1.2em;
     border-radius: 6px;
     
     min-width: min-content;
@@ -704,7 +715,9 @@ section.hero {
 
 .contact-info p:first-child {
     text-align: center;
-    font-size: 1.4rem;
+    /*big screen font-size*/
+/*    font-size: 1.4rem;*/
+    font-size: 1.2reml
     margin-bottom: 0.5em;
 }
 
@@ -715,6 +728,7 @@ section.hero {
     font-family: var(--main-font), 'Arial', sans-serif;
     color: var(--main-text);
     letter-spacing: 0.5px;
+    font-size: 0.8rem;
 }
 
 /*
@@ -967,7 +981,7 @@ section.hero {
 /* ****************** */
 
 footer {
-    background-color: var(--footerpurple);
+    background-color: var(--darkpurple);
     font-size: 0.8rem;
     padding: 30px;
     padding-bottom: 10px;
@@ -975,7 +989,9 @@ footer {
 
 footer p {
     text-align: center;
-    font-size: 1.4rem;
+/*    big screen font size*/
+/*    font-size: 1.4rem;*/
+    font-size: 1.2rem;
     max-width: 600px;
     margin: 0.5em auto 3em auto;
     line-height: 1.5;
@@ -985,8 +1001,7 @@ footer p,
 footer small,
 footer nav a,
 footer nav li,
-footer .social-links,
-footer .social-links ion-icon {
+footer .social-flex ion-icon {
     color: rgba(242,240,245,0.8);
 }
 
@@ -996,23 +1011,16 @@ footer span {
 
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    max-width: 900px;
-    margin: 0.5em auto;
+    justify-content: space-between;
+    margin: 1em auto;
 }
 
 footer nav {
-    max-width: max-content;
-    padding: 0 1.5em;
-    letter-spacing: 0.5px;
+    display: none;
 }
 
-footer small {
-    padding: 0 1.5em;
-    letter-spacing: 0.25px;
-}
 
 footer nav i, 
 footer nav ion-icon {
@@ -1023,6 +1031,47 @@ footer nav ion-icon {
     display: flex;
 }
 
-nav a {
-    color: var(--darkpurple);
+.social-flex {
+    display: flex;
+    margin: 1em auto;
+    align-items: center;
 }
+
+.social-flex ion-icon {
+    display: block;
+    margin: 0.5em;
+    width: 25px;
+    height: 25px;
+}
+
+.social-flex .pride-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.credits-flex {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    
+    width: max-content;
+    margin: 2em auto;
+    
+    padding: 0 1.5em;
+    letter-spacing: 0.25px;
+    text-align: center;
+}
+
+.credits-flex small:first-child {
+    margin-bottom: 1em;
+}
+
+@media (min-width: 800px) {
+    footer nav {
+        max-width: max-content;
+        padding: 0 1.5em;
+        letter-spacing: 0.5px;
+    }
+}
+
+

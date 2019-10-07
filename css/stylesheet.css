@@ -535,7 +535,8 @@ section.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+    padding: 0 0.5em;
+    margin: 1em auto;
 }
 
 .honouring-card {
@@ -547,7 +548,7 @@ section.hero {
 }
 
 .honouring-card-img {
-    width: 25%;
+    width: 30%;
 }
 
 .honouring-card-title,
@@ -557,11 +558,11 @@ section.hero {
 }
 
 .honouring-card-text {
-   margin-left: 1.2em;
+   margin-left: 1.8em;
 }
 
 .honouring-card-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: var(--headings);
     color: var(--darkpurple);
     font-weight: 700;

@@ -73,11 +73,11 @@ p {
 h1, h2, h3 {
     font-family: var(--headings), 'Arial', sans-serif;
     color: var(--darkpurple);
-    text-align: center;
 }
 
 h1 {
     font-weight: 200;
+    text-align: center;
 }
 
 h2 {
@@ -86,6 +86,7 @@ h2 {
     margin: 0 auto;
     margin-bottom: 0.5em;
     font-weight: 400;
+    text-align: center;
 }
 
 /*h2::after {
@@ -100,6 +101,7 @@ h3 {
     font-size: 1.1rem;
     padding: 0.5em;
     padding-bottom: 0;
+    text-align: left;
 }
 
 @media (min-width: 800px) {
@@ -117,7 +119,6 @@ h3 {
     h3 {
         font-size: 1.5rem;
         padding: 1em;
-        text-align: left;
     }
 }
 
@@ -170,18 +171,26 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: var(--bgpurple);
-    padding: 20px 20px;
+    padding: 10px;
     width: 100%
 }
 
 header nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items:  center;
-    max-width: max-content;
+    display: none;
 }
 
-
+@media (min-width: 800px) {
+    header {
+        padding: 20px;
+    }
+    
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items:  center;
+        max-width: max-content;
+    }
+}
 
 
 /*************************************/
@@ -190,10 +199,9 @@ header nav ul {
 
 .logo {
     display: flex;
-    /*big screen margin*/
-/*    margin: 1em;*/
     margin: 1em auto;
     align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
@@ -202,12 +210,11 @@ header nav ul {
 }
 
 .logo_sr {
-    height: 30px;
+    display: none;
 }
 
 .logo_sr--hero {
-    /*big screen height*/
-/*    height: 65px;*/
+    display: block;
     height: 60px;
 }
 
@@ -221,7 +228,7 @@ header nav ul {
 }
 
 .logo_name {
-    width: 250px;
+    width: 150px;
     margin: 0;
 }
 
@@ -233,7 +240,7 @@ header nav ul {
 .lcc::before {
     content: "|";
     display: inline;
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-right: 5px;
 }
 
@@ -241,12 +248,12 @@ header nav ul {
     font-family: var(--headings);
     color: var(--darkpurple);
     text-transform: lowercase;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.3px;
     margin: 0;
     margin-left: 0.5em;
     padding: 0;
     min-width: max-content;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     line-height: 1;
 }
 
@@ -263,9 +270,35 @@ header nav ul {
     font-size: 1rem;
 }
 
+@media (min-width: 500px) {
+    .logo { 
+        margin: 1em;
+        justify-content: flex-start;
+    }
+    
+    .logo_sr { 
+        display: block;
+        height: 30px;
+    }
+    
+    .logo_sr--hero { height: 65px;}
+    
+    .logo_name {
+        width: 250px;
+        margin: 0;
+    }
+    
+    .lcc::before { font-size: 1.4rem;}
+    
+    .lcc {
+        font-size: 0.9rem;
+        letter-spacing: 0.6px;
+    }
+}
 
 
-/*************************************/
+
+/************************************
 /* HEADER, SOCIAL LINKS */
 /************************************/
 
@@ -944,7 +977,7 @@ section.hero {
 /* ****************** */
 /* ABOUT SECTION */
 /* ****************** */
-
+/*
 .aboutBody h1::before,
 .services h1::before {
     display: block;
@@ -956,7 +989,7 @@ section.hero {
 
 .aboutBody h1::before {
     content: "A little bit";
-}
+}*/
 
 .aboutBody h1,
 .services h1 {
@@ -966,6 +999,7 @@ section.hero {
 }
 
 .portrait {
+    font-size: 0.9rem;
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -992,6 +1026,12 @@ section.hero {
 
 .couple p {
     max-width: 700px;
+}
+
+@media (min-width: 800px)  {
+    .portrait {
+        font-size: 1rem;
+    }
 }
 
 /* ****************** */
@@ -1033,8 +1073,7 @@ section.hero {
 }
 
 .marriage-main,
-.unique>div,
-.fees>div {
+.unique>div {
     margin: 30px auto;
     max-width: 700px;
 }
@@ -1127,6 +1166,26 @@ section.hero {
     }
 }
 
+.fees>div {
+    margin: 1em auto;
+    max-width: 700px;
+}
+
+.fees h2 {
+    font-size: 1.2rem;
+}
+
+.fees p {
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 1em;
+}
+
+@media (min-width: 800px) {
+    .fees p {
+        font-size: 1rem;
+    }
+}
 
 /* ****************** */
 /* FOOTER  */

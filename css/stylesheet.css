@@ -785,21 +785,19 @@ section.hero {
     margin: 0 auto;
 }
 
-.wild p {
-    margin-bottom: 20px;
-}
-
 .wild-icons {
-    margin: 0 auto;
+    margin: 1em auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     max-width: 900px;
-    flex-wrap: wrap;
 }
 
 .wild-icons>img {
-    max-width: 90px;
+    width: 25%;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
     padding: 0.5em;
 }
 
@@ -807,6 +805,12 @@ section.hero {
     
     .wild h2 {
         font-size: 2rem;
+    }
+    
+    .wild-icons {
+        margin: 0 auto;
+        max-width: 900px;
+        flex-wrap: wrap;
     }
     
     .wild-icons>img {
@@ -848,7 +852,7 @@ section.hero {
     background-color: rgba(255, 255, 255, 0.9);
     /*big screen padding*/
 /*    padding: 1.6em 2em;*/ 
-    padding: 1em 1.2em;
+    padding: 1.3em;
     border-radius: 6px;
     
     min-width: min-content;
@@ -863,7 +867,7 @@ section.hero {
     text-align: center;
     /*big screen font-size*/
 /*    font-size: 1.4rem;*/
-    font-size: 1.2reml
+    font-size: 1.2rem;
     margin-bottom: 0.5em;
 }
 

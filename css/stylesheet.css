@@ -520,12 +520,13 @@ section.hero {
 /* ****************** */
 /* HONOURING SECTION  */
 /* ****************** */
+
 .honouring {
     padding: 8vh 6vw 8vh 6vw;
 }
 
 .honouring h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
 
@@ -542,26 +543,25 @@ section.hero {
     flex-direction: row;
     justify-self: center;
     align-items: center;
-    margin: 0.5em 1em;
+    margin: 0.8em 0.5em;
 }
 
 .honouring-card-img {
-    width: 30%;
+    width: 25%;
 }
 
 .honouring-card-title,
 .honouring-card-body {
     text-align: left;
-    padding: 0.5em;
+    padding: 0;
 }
 
 .honouring-card-text {
-   margin-left: 1.1em;
+   margin-left: 1.2em;
 }
 
 .honouring-card-title {
-    font-size: 0.9rem;
-    padding-bottom: 0;
+    font-size: 1rem;
     font-family: var(--headings);
     color: var(--darkpurple);
     font-weight: 700;
@@ -695,7 +695,7 @@ section.hero {
 }
 
 .lifecycle h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     text-align: left;
 }
@@ -774,7 +774,7 @@ section.hero {
 /* **************************/
 
 .wild h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     text-align: left;
 }
@@ -821,7 +821,7 @@ section.hero {
 /* ****************** */
 
 .contact h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     text-align: left;
 }

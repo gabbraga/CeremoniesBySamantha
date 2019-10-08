@@ -3,17 +3,10 @@
 ***********************/
 
 :root {
-/*    --darkpurple: #381860;*/
-/*    --darkpurple: #473f72;*/
     --darkpurple: #31273c;
-/*    --lightpurple:#6b4b95 ;*/
     --lightpurple: #c6b8e0;
-/*    --bgpurple: #e5ddef;*/
     --bgpurple: #f2f0f5;
-/*    --main-text: rgba(39, 39, 39, 0.96);*/
     --main-text: #232323;
-    
-/*    --main-font: 'Roboto+Slab';*/
     --main-font: 'Bangla Sangham MN';
     --headings: 'Montserrat';
 }
@@ -73,6 +66,7 @@ p {
 h1, h2, h3 {
     font-family: var(--headings), 'Arial', sans-serif;
     color: var(--darkpurple);
+    max-width: max-content;
 }
 
 h1 {
@@ -81,7 +75,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     padding: 0.5em;
     margin: 0 auto;
     margin-bottom: 0.5em;
@@ -89,16 +83,8 @@ h2 {
     text-align: center;
 }
 
-/*h2::after {
-    display: block;
-    border-bottom: 1px solid var(--darkpurple);
-    content: "";
-    width: 70%;
-    margin: 12px auto 0 auto;
-}*/
-
 h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0.5em;
     padding-bottom: 0;
     text-align: left;
@@ -106,22 +92,22 @@ h3 {
 
 @media (min-width: 800px) {
     h1 {
-        font-size: 3rem;
+        font-size: 2rem;
+        padding: 0.5em;
     }
     
     h2 {
-        font-size: 2rem;
-        padding: 1em;
-        margin-bottom: 1em;
-        max-width: max-content;
+        font-size: 1.5rem;
+        padding: 0.5em;
+        margin-bottom: 0;
     }
     
     h3 {
-        font-size: 1.5rem;
-        padding: 1em;
+        font-size: 1.2rem;
+        padding: 0.5em;
+        margin-bottom: 0;
     }
 }
-
 
 
 
@@ -161,7 +147,6 @@ a:visited {
 
 
 
-
 /*************************************/
 /* HEADER, NAVIGATION */
 /************************************/
@@ -189,12 +174,12 @@ header nav ul {
         flex-direction: column;
         align-items:  center;
         max-width: max-content;
+        white-space: nowrap;
     }
 }
 
-
 /*************************************/
-/* HEADER, LOGO */
+/* LOGO */
 /************************************/
 
 .logo {
@@ -311,7 +296,6 @@ ul {
 nav li {
     margin: 0.5em 1em;
     color: var(--darkpurple);
-/*    white-space: nowrap;*/
     text-transform: lowercase;
     
 }
@@ -513,6 +497,7 @@ section.hero {
     
     font-size: 0.9rem;
     margin: 1em auto;
+    max-width: 400px;
 }
 
 .sam--pic {
@@ -525,16 +510,21 @@ section.hero {
     margin-bottom: 1em;
 }
 
-
 .celebrate .button {
     margin: 1.5em auto 0.5em;
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
     
     .celebrate-flex {
-        max-width: 900px;
+        flex-direction: row;
+        max-width: 700px;
+    }
+    
+    .celebrate p {
+        font-size: 1rem;
+        margin: 2em 2em 0;
     }
     
     .sam--pic {
@@ -544,7 +534,7 @@ section.hero {
     }
     
     .celebrate a.button {
-        margin: 20px 20px 20px auto;
+        margin: 1em auto 0 3em;
     }
 }
 
@@ -558,12 +548,6 @@ section.hero {
     padding: 8vh 6vw 8vh 6vw;
 }
 
-.honouring h2 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-}
-
-
 .honouring-flex {
     display: flex;
     flex-direction: column;
@@ -575,17 +559,19 @@ section.hero {
 .honouring-card {
     display: flex;
     flex-direction: row;
-    justify-self: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0.8em 0.5em;
 }
 
 .honouring-card-img {
+    max-width: 100px;
     width: 30%;
 }
 
 .honouring-card-title,
 .honouring-card-body {
+    max-width: 300px;
     text-align: left;
     padding: 0;
 }
@@ -607,27 +593,20 @@ section.hero {
 }
 
 
-@media (min-width: 800px) {
-
-    .honouring h2 {
-        font-size: 2rem;
-    }
+@media (min-width: 700px) {
     
     .honouring-flex {
-        margin: 3em auto;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: baseline;
         flex-wrap: wrap;
         max-width: 1000px;
-        max-height: 400px;
     }
     
     .honouring-card {
         flex-direction: column;
-        max-width: 250px;
+        max-width: 220px;
         max-height: 300px;
-        justify-self: center;
         align-items: center;
         margin: 1em;
     }
@@ -636,14 +615,18 @@ section.hero {
         width: 50%;
     }
     
+    .honouring-card-text {
+        margin-left: 0;
+    }
+    
     .honouring-card-title,
     .honouring-card-body {
         text-align: center;
-        padding: 1em;
+        padding: 0.5em;
     }
     
     .honouring-card-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-family: var(--headings);
         color: var(--darkpurple);
         padding-bottom: 0;
@@ -655,71 +638,6 @@ section.hero {
     }
 }
 
-
-/*
-.honouring .service-links {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-*/
-
-/*
-.honouring .service-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--headings), "Arial", sans-serif;
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    font-size: 1.4rem;
-    border-radius: 10px;
-    transform: scale(1.2);
-    transition: transform 250ms;
-    text-align: center;
-}
-*/
-
-/*
-.honouring .service-links a::before {
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/groupphoto.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-*/
-
-
-/*
-.honouring .service-links a:hover {
-    transform: scale(1);
-}
-*/
-
-/*
-
-.honouring .card:nth-child(2) a::before {
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/ringphoto.jpg);
-    background-position: center;
-}
-*/
-
-/*
-.honouring .card:nth-child(3) a::before {
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/handfasting.jpg);
-    background-position: center;
-}
-*/
-
-
 /* **************************/
 /* LIFECYCLE SECTION        */
 /* **************************/
@@ -729,7 +647,6 @@ section.hero {
 }
 
 .lifecycle h2 {
-    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     text-align: left;
 }
@@ -746,7 +663,7 @@ section.hero {
 }
 
 .lifecycle p {
-    max-width: 600px;   
+    max-width: 450px;   
 }
 
 .celebrant-logo-flex {
@@ -783,10 +700,9 @@ section.hero {
 }
 
 
-@media (min-width: 900px) {
-    
-    .lifecycle h2 {
-        font-size: 2rem;
+@media (min-width: 800px) {
+    .lifecycle p {
+        max-width: 600px;
     }
     
     .lifecycle-flex {
@@ -808,14 +724,12 @@ section.hero {
 /* **************************/
 
 .wild h2 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
     text-align: left;
 }
 
 .wild p {
     font-size: 0.9rem;
-    max-width: 800px; 
+    max-width: 700px; 
     margin: 0 auto;
 }
 
@@ -824,7 +738,7 @@ section.hero {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    max-width: 900px;
+    max-width: 700px;
 }
 
 .wild-icons>img {
@@ -835,21 +749,16 @@ section.hero {
     padding: 0.5em;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 500px) {
     
-    .wild h2 {
-        font-size: 2rem;
-    }
-    
-    .wild-icons {
-        margin: 0 auto;
-        max-width: 900px;
-        flex-wrap: wrap;
+    .wild p {
+        font-size: 1rem;
     }
     
     .wild-icons>img {
-        max-width: 140px;
-        padding: 10px;
+        height: 150px;
+        object-fit: contain;
+        object-position: center;
     }
 }
 
@@ -859,22 +768,20 @@ section.hero {
 /* ****************** */
 
 .contact h2 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
     text-align: left;
 }
 
 .contact>p{
     font-size: 0.9rem;
-    max-width: 800px;
+    max-width: 450px;
     margin: 0 auto;
 }
 
 .contact>div{
-    max-width: 900px;
-    padding: 10px;
+    max-width: 450px;
     margin: 1em auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
@@ -884,24 +791,22 @@ section.hero {
     flex-direction: column;
     
     background-color: rgba(255, 255, 255, 0.9);
-    /*big screen padding*/
-/*    padding: 1.6em 2em;*/ 
-    padding: 1.3em;
     border-radius: 6px;
-    
+   
+    padding: 1.2em;
     min-width: min-content;
     max-width: max-content;
-    margin: 1em auto;
+    margin: 0 auto 1.5em;
     
-    font-family: var(--headings), 'Arial', sans-serif;
     color: var(--darkpurple);
 }
 
 .contact-info p:first-child {
+    font-family: var(--headings), 'Arial', sans-serif;
     text-align: center;
-    /*big screen font-size*/
-/*    font-size: 1.4rem;*/
     font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
     margin-bottom: 0.5em;
 }
 
@@ -909,43 +814,17 @@ section.hero {
 .contact-info--number {
     display: flex;
     align-items: center;
-    font-family: var(--main-font), 'Arial', sans-serif;
     color: var(--main-text);
     letter-spacing: 0.5px;
     font-size: 0.8rem;
-}
-
-/*
-.contact-info p:first-child::after {
-    content: '';
-    display: block;
-    width: 100%;
-    border-bottom: 1px solid var(--darkpurple);
-    margin: 2px auto 0 auto;
-}
-*/
-
-.contact-info p {
     margin: 0;
     padding: 0;
 }
 
-
 .info-list {
     font-size: 0.9rem;
-    padding: 1em;
     margin: 0 auto;
-    order: -1;
-}
-
-@media (max-width: 800px) {
-    .contact>div {
-        flex-direction: column;
-    }
-    
-    .info-list {
-        order: 2;
-    }
+    order: 2;
 }
 
 .info-list p {
@@ -971,14 +850,49 @@ section.hero {
 }
 
 .contact-info ion-icon {
-    margin-right: 0.3em;
+    margin-right: 0.5em;
 }
+
+@media (min-width: 800px) {
+    
+    .contact>p{
+        font-size: 1rem;
+        max-width: 700px;
+    }
+    
+    .contact>div {
+        flex-direction: row;
+        max-width: max-content;
+    }
+    
+    .contact-info {
+        margin: 0 1em;
+        padding: 1.8em 1.5em;
+    }
+    
+    .contact-info p:first-child {
+        font-size: 1.4rem;
+    }
+    
+    .contact-info--email,
+    .contact-info--number {
+        font-size: 0.9rem;
+    }
+    
+    .info-list {
+        font-size: 1rem;
+        margin: 0 1em;
+        order: -1;
+    }
+}
+
+
 
 /* ****************** */
 /* ABOUT SECTION */
 /* ****************** */
 /*
-.aboutBody h1::before,
+.about-myself::before,
 .services h1::before {
     display: block;
     text-align: left;
@@ -991,7 +905,7 @@ section.hero {
     content: "A little bit";
 }*/
 
-.aboutBody h1,
+.about-myself,
 .services h1 {
     width: max-content;
     font-size: 3em;
@@ -1021,7 +935,6 @@ section.hero {
 }
 .couple h2 {
     max-width: 500px;
-    font-size: 1.4rem;
 }
 
 .couple p {
@@ -1049,38 +962,32 @@ section.hero {
     background-size: cover;
     background-position: center;
 }
-
+/*
 .services h1::before {
     content: "Personalized, Custom";
     color: #fff;
-}
+}*/
 
 .services h1 {
     color: #fff;
 }
 
-.services-images {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 800px;
-    flex-wrap: wrap;
-}
-
-.services-images>img {
-    margin: 0 20px;
-    padding: 10px;
+.unique p,
+.marriage-main>p,
+.vow p,
+.elope p,
+.fees p {
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 1em;
 }
 
 .marriage-main,
-.unique>div {
-    margin: 30px auto;
+.unique>div,
+.vow-main,
+.fees>div {
+    margin: 1em auto;
     max-width: 700px;
-}
-
-.marriage-icons-title {
-    text-align: center;
-    margin-bottom: 1em;
 }
 
 .marriage-icons {
@@ -1088,102 +995,74 @@ section.hero {
     display: flex;
     align-items: baseline;
     justify-content: space-evenly;
-    max-width: 1000px;
-    flex-wrap: wrap;
 }
 
 .marriage-card {
     display: flex;
     flex-direction: column;
-    width: 150px;
     align-items: center;
+    justify-content: space-between;
     margin: 0.5em;
 }
 
 .marriage-card img {
-    width: 80%;
-}
-
-.marriage-card p:last-child {
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 0.5em;
+    width: 70%;
 }
 
 .marriage-card-title {
-    font-size: 1rem;
     font-family: var(--headings);
     color: var(--darkpurple);
     text-align: center;
-    padding: 1em;
-    padding-bottom: 0.5em;
+    font-size: 0.8rem;
+    padding: 0.5em;
 }
-
 
 .vow-main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
-    font-size: 0.95rem;
     margin: 0 auto;
 }
 
-.vow-main h3 {
-    font-size: 1.3rem;
-    padding: 0 10px 0;
-}
-
-.vow-main p {
-    padding: 0;
-    margin: 10px;
-}
-
 .services-img--vow {
-    width: 200px;
-    height: 300px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
     object-fit: cover;
-    margin: 1.5em;
+    border: 4px solid #bfbdcd;
 }
 
 @media (min-width: 800px) {
-    .vow-main {
+    .unique p,
+    .marriage-main>p,
+    .vow p,
+    .elope p,
+    .fees p {
         font-size: 1rem;
+    }
+    
+    .unique h2,
+    .marriage-main h2,
+    .vow h2,
+    .elope h2,
+    .fees h2 {
+        font-size: 2rem;
+    }
+    
+    .vow-main {
         flex-direction: row;
-        max-width: 800px;
-        align-items: flex-start;
-        justify-content: space-between;
+        align-items: center;
     }
     
     .vow-main h3 {
         font-size: 1.3rem;
         padding: 0 1rem 0;
     }
-
-    .vow-main p {
-        padding: 0;
-        margin: 1rem;
-    }
-}
-
-.fees>div {
-    margin: 1em auto;
-    max-width: 700px;
-}
-
-.fees h2 {
-    font-size: 1.2rem;
-}
-
-.fees p {
-    font-size: 0.9rem;
-    padding: 0;
-    margin: 1em;
-}
-
-@media (min-width: 800px) {
-    .fees p {
-        font-size: 1rem;
+    
+    .services-img--vow {
+        width: 220px;
+        height: 220px;
+        border: 4px solid #bfbdcd;
     }
 }
 
@@ -1193,15 +1072,14 @@ section.hero {
 
 footer {
     background-color: var(--darkpurple);
-    font-size: 0.8rem;
-    padding: 30px;
-    padding-bottom: 10px;
+    padding: 2em;
+    padding-bottom: 1em;
 }
 
 footer p {
     text-align: center;
-    font-size: 1.1rem;
-    max-width: 600px;
+    font-size: 1rem;
+    max-width: 400px;
     margin: 0.5em auto;
     line-height: 1.5;
 }
@@ -1211,7 +1089,7 @@ footer small,
 footer nav a,
 footer nav li,
 footer .social-flex ion-icon {
-    color: rgba(242,240,245,0.8);
+    color: rgba(242,240,245,0.9);
 }
 
 footer span {
@@ -1220,21 +1098,15 @@ footer span {
 
 .footer-bottom {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    max-width: max-content;
     margin: 1em auto;
 }
-
-footer nav {
-    display: none;
-}
-
 
 .social-flex {
     display: flex;
-    margin: 1em auto;
+    justify-content: center;
     align-items: center;
+    margin: 0.5em;
 }
 
 .social-flex ion-icon {
@@ -1249,41 +1121,70 @@ footer nav {
     height: 20px;
 }
 
+.footer-nav {
+    display: none;
+}
+
 .credits-flex {
     display: flex;
     flex-direction: column;
-    order: 2;
+    align-items: center;
     
     width: max-content;
-    margin: 2em auto;
+    margin: 3em auto 0;
     
+    font-size: 0.7rem;
     padding: 0 1.5em;
     letter-spacing: 0.25px;
     text-align: center;
 }
 
 .credits-flex small:first-child {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+}
+
+@media (min-width: 500px) {
+    footer p {
+        font-size: 1.1rem;
+    }
+    
+    .footer-nav {
+        white-space: nowrap;
+        display: flex;
+        font-size: 0.8rem;
+        max-width: max-content;
+        margin: 0.5em;
+        letter-spacing: 0.4px;
+    }
+    
+    .footer-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1em auto;
+        max-width: 700px;
+    }
+    
+    .social-flex ion-icon {
+        margin: 0.5em;
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-flex .pride-icon {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 @media (min-width: 800px) {
     
     footer p {
-        font-size: 1.4rem;
-        margin: 0.5em auto 3em auto;
-    }
-    
-    footer nav {
-        display: flex;
-        max-width: max-content;
-        padding: 0 1.5em;
-        letter-spacing: 0.5px;
-    }
-    
-    footer nav i, 
-    footer nav ion-icon {
-    font-size: 0.8rem;
+        font-size: 1.3rem;
+        max-width: 550px;
+        margin: 0.5em auto 2em auto;
     }
 }
+
 
 

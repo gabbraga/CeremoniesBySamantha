@@ -70,6 +70,7 @@ h1, h2, h3 {
 }
 
 h1 {
+    font-size: 1.8rem;
     font-weight: 200;
     text-align: center;
 }
@@ -146,52 +147,37 @@ a:visited {
 }
 
 
-
-/*************************************/
-/* HEADER, NAVIGATION */
-/************************************/
+/****************************************/
+/*                HEADER                */
+/***************************************/
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--bgpurple);
-    padding: 10px;
+    padding: 1em;
     width: 100%
 }
 
-header nav ul {
-    display: none;
+.hero header {
+    margin-bottom: 1em;
+    background-color: transparent;
 }
 
-@media (min-width: 800px) {
-    header {
-        padding: 20px;
-    }
-    
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items:  center;
-        max-width: max-content;
-        white-space: nowrap;
-    }
-}
-
-/*************************************/
-/* LOGO */
-/************************************/
+/*************/
+/* LOGO      */
+/*************/
 
 .logo {
     display: flex;
     margin: 1em auto;
-    align-items: center;
     justify-content: center;
     width: 100%;
 }
 
 .logo--hero {
-    max-width: 400px;
+    max-width: 350px;
 }
 
 .logo_sr {
@@ -200,15 +186,16 @@ header nav ul {
 
 .logo_sr--hero {
     display: block;
-    height: 60px;
+    width: 45px;
 }
 
 .logo_group--hero {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 10px;
+    margin: 0.5em;
     padding-right: 0;
 }
 
@@ -218,7 +205,7 @@ header nav ul {
 }
 
 .logo_name--hero {
-    width: 100%;
+    width: 220px;
     margin-bottom: 0.5em;
 }
 
@@ -242,7 +229,6 @@ header nav ul {
     line-height: 1;
 }
 
-
 .lcc--hero::before {
     display: none;
 }
@@ -252,26 +238,34 @@ header nav ul {
     margin: 0;
     padding: 0;
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 @media (min-width: 500px) {
-    .logo { 
-        margin: 1em;
-        justify-content: flex-start;
-    }
     
-    .logo_sr { 
-        display: block;
-        height: 30px;
+    .logo--hero {
+        max-width: 400px;
     }
-    
-    .logo_sr--hero { height: 65px;}
     
     .logo_name {
-        width: 250px;
-        margin: 0;
+        width: 180px;
     }
+    
+    .logo_name--hero {
+        width: 260px;
+    }
+   
+    .logo_sr { 
+        display: block;
+        width: 20px;
+        margin-right: 5px; 
+    }    
+    
+    .logo_sr--hero { 
+        display: block;
+        width: 50px;
+    } 
     
     .lcc::before { font-size: 1.4rem;}
     
@@ -279,90 +273,150 @@ header nav ul {
         font-size: 0.9rem;
         letter-spacing: 0.6px;
     }
-}
-
-
-
-/************************************
-/* HEADER, SOCIAL LINKS */
-/************************************/
-
-ul {
-    list-style: none;
-    padding: 0;
     
+    .lcc--hero {
+        font-size: 1.1rem;
+    }
 }
 
-nav li {
-    margin: 0.5em 1em;
-    color: var(--darkpurple);
-    text-transform: lowercase;
+@media (min-width: 900px) {
+    .logo { 
+        margin: 1em;
+        align-items: center;
+        justify-content: flex-start;
+    }
     
+     .logo_name {
+        width: 200px;
+        margin: 0;
+    }
+    
+    .logo_name--hero {
+        width: 260px;
+    }
+    
+    .logo_sr { 
+        width: 30px;
+        margin-right: 10px; 
+    } 
+    
+    .logo_sr--hero {
+        width: 55px;
+    }
+    
+     .lcc--hero {
+        font-size: 1.1rem;
+        text-align: left;
+    }
 }
 
-nav li a,
-.social-links ion-icon {
-    transition: color 250ms;
+
+/*****************/
+/*  NAVIGATION   */
+/****************/
+
+nav { 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    max-width: max-content;
 }
 
-.phone-number {
-    color: inherit;
-}
-
-/* make the instagram & facebook icons bigger*/
-.logo-facebook {
-   font-size: 1.2em; 
-}
-
-.logo-instagram {
-    font-size: 1.3em;
-}
-
-/*TODO: MAKE FB AND INSTAGRAM ICONS COLOUR PURPLE ON FOCUS STATE*/
-nav li a:focus,
-nav li a:hover,
-nav li a:active,
-.social-links ion-icon:hover
-{
-    color: var(--lightpurple);
-}
-
-.social-links {
+.nav {
     display: flex;
     align-items: center;
-    margin: 0;
-    
+    list-style: none;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: lowercase;
+    max-width: max-content;
+    padding: 0;
+    margin: 1em;
 }
 
-.social-links ion-icon {
+.nav--header {
+    font-size: 0.9rem;
+}
+
+.nav { display: none; }
+
+.social-flex {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin: 0.5em;
+}
+
+.social-flex ion-icon {
     display: block;
-    margin: 5px;
+    margin: 0.5em;
     color: var(--darkpurple);
 }
 
-.social-links--hero ion-icon {
-    color: var(--lightpurple);
+header .social-flex { display: none; }
+
+.phone-number { color: inherit; }
+
+/*now add the nav*/
+@media (min-width: 700px) {
+    .nav {
+        display: flex;
+        margin-right: 0;
+    }
+    
+    header .social-flex { display: flex; }
+    
+    .nav--footer {
+        font-size: 0.8rem;
+        margin: 0.5em;
+        margin-right: 0;
+        letter-spacing: 0.4px;
+    }
+
+    .nav--header>li { margin: 0.5em 0.6em; }
+    .nav--footer>li { margin: 0.5em 1em; }
+    .nav--header a { color: var(--darkpurple); }
+    
+    .social-flex {
+        margin-left: 0;
+    }
+    
+     .logo-facebook { font-size: 1.2em;}
+    .logo-instagram { font-size: 1.3em; }
+    .pride-icon { font-size: 1em; }
+    
+    .social-flex ion-icon {
+        margin: 0.3em;
+    }
+    
+    .nav--hero a,
+    .nav--hero li,
+    .social-flex--hero ion-icon {
+        color: var(--lightpurple);
+    }
 }
 
-@media (min-width: 800px) {
+/*full desktop nav*/
+@media (min-width: 900px) {
     header {
         flex-direction: row;
         justify-content: space-between;
+        padding: 1.5em;
     }
     
-    header nav ul {
-        flex-direction: row;
+    .hero header {
+        margin-bottom: 3em;
     }
     
     .logo_group {
         align-items: flex-start;
     }
+    
+    .nav--header {
+        font-size: 1rem;
+    }
 }
-
-nav a {
-    color: var(--darkpurple);
-}
-
 
 /* ****************** */
 /* HERO SECTION     */
@@ -381,23 +435,9 @@ nav a {
     min-height: 100vh;
 }
 
-.logo_sr--hero {
-    height: 45px;
-}
-
-.lcc--hero {
-    text-align: center;
-}
-
 section.hero {
     padding: 0;
     padding-bottom: 50px;
-}
-
-.hero header {
-    margin-bottom: 1em;
-    background-color: transparent;
-    align-items: flex-start;
 }
 
 .hero>div {
@@ -413,16 +453,6 @@ section.hero {
     word-spacing: 5px;
     font-size: 3rem;
     max-width: max-content;
-}
-
-.nav--hero {
-    margin: 0.8em;
-}
-
-.nav--hero a,
-.nav--hero li,
-.social-icon {
-    color: var(--lightpurple);
 }
 
 .hero h1,
@@ -454,10 +484,6 @@ section.hero {
     text-align: inherit;
 }
 
-.nav--hero {
-    display: none;
-}
-
 @media (min-width: 500px) {
     .hero h1 {
         letter-spacing: 2px;
@@ -468,21 +494,6 @@ section.hero {
     
     .button--hero {
         font-size: 1.1rem;
-    }
-    
-    .lcc--hero {
-        text-align: left;
-    }
-}
-
-@media (min-width: 800px) {
-
-    .nav--hero {
-        display: flex;
-    }
-    
-    .hero header {
-        margin-bottom: 3em;
     }
 }
 
@@ -912,42 +923,76 @@ section.hero {
 .about-myself,
 .services h1 {
     width: max-content;
-    font-size: 3em;
-    margin: 20px auto;
+    margin: 1em auto;
 }
 
-.portrait {
+.portrait-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portrait-flex-body {
+    max-width: 600px;
+    margin: 0 auto;
     font-size: 0.9rem;
-    display: grid;
-    grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-column-gap: 30px;
-    padding-top: 20px;
 }
 
 .portrait img {
-    grid-row: span 3;
-    width: 100%;
-    border-radius: 20px;
-    padding: 10px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: 0 -20px;
+    border-radius: 50%;
+    border: 6px solid #bfbdcd;
+    order: 2;
+    margin: 0.5em;
 }
 
 .couple h2,
 .couple p {
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0;
+    margin: 1rem auto;
 }
 .couple h2 {
-    max-width: 500px;
+    font-size: 1.1rem;
+    text-align: left;
+    max-width: 400px;
 }
 
 .couple p {
-    max-width: 700px;
+    font-size: 0.9rem;
+    max-width: 600px;
 }
 
-@media (min-width: 800px)  {
-    .portrait {
+@media (min-width: 700px)  {
+    
+    .portrait-flex {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .portrait-flex-body {
+        min-width: 400px;
         font-size: 1rem;
+        order: 2;
+        margin: 0 2em;
+    }
+    
+    .portrait img {
+        width: 100%;
+        max-width: 300px;
+        min-height: 300px;
+        border-radius: 20px;
+        object-position: center;
+        margin: 1em;
+    }
+    
+    .couple h2 {
+        font-size: 1.2rem;
+        text-align: center;
     }
 }
 
@@ -966,11 +1011,6 @@ section.hero {
     background-size: cover;
     background-position: center;
 }
-/*
-.services h1::before {
-    content: "Personalized, Custom";
-    color: #fff;
-}*/
 
 .services h1 {
     color: #fff;
@@ -999,6 +1039,7 @@ section.hero {
     display: flex;
     align-items: baseline;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .marriage-card {
@@ -1090,9 +1131,9 @@ footer p {
 
 footer p,
 footer small,
-footer nav a,
-footer nav li,
-footer .social-flex ion-icon {
+.nav--footer a,
+.nav--footer li,
+.footer-bottom .social-flex ion-icon {
     color: rgba(242,240,245,0.9);
 }
 
@@ -1102,31 +1143,10 @@ footer span {
 
 .footer-bottom {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: max-content;
     margin: 1em auto;
-}
-
-.social-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5em;
-}
-
-.social-flex ion-icon {
-    display: block;
-    margin: 0.5em;
-    width: 25px;
-    height: 25px;
-}
-
-.social-flex .pride-icon {
-    width: 20px;
-    height: 20px;
-}
-
-.footer-nav {
-    display: none;
 }
 
 .credits-flex {
@@ -1152,15 +1172,6 @@ footer span {
         font-size: 1.1rem;
     }
     
-    .footer-nav {
-        white-space: nowrap;
-        display: flex;
-        font-size: 0.8rem;
-        max-width: max-content;
-        margin: 0.5em;
-        letter-spacing: 0.4px;
-    }
-    
     .footer-bottom {
         display: flex;
         justify-content: center;
@@ -1169,24 +1180,29 @@ footer span {
         max-width: 700px;
     }
     
-    .social-flex ion-icon {
-        margin: 0.5em;
-        width: 20px;
-        height: 20px;
-    }
-
-    .social-flex .pride-icon {
-        width: 18px;
-        height: 18px;
-    }
 }
 
 @media (min-width: 800px) {
-    
     footer p {
         font-size: 1.3rem;
         max-width: 550px;
         margin: 0.5em auto 2em auto;
+    }
+    
+    .footer-bottom {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 900px;
+    }
+    
+    footer nav {
+        order: 2;
+    }
+    
+    .credits-flex {
+        align-items: flex-start;
+        margin: 1em;
     }
 }
 

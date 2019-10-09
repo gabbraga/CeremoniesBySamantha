@@ -306,7 +306,7 @@ nav li a,
 }
 
 .phone-number {
-    color: var(--darkpurple);
+    color: inherit;
 }
 
 /* make the instagram & facebook icons bigger*/
@@ -819,6 +819,10 @@ section.hero {
     font-size: 0.8rem;
     margin: 0;
     padding: 0;
+}
+
+.contact-info--email a {
+    color: inherit;
 }
 
 .info-list {

@@ -293,6 +293,7 @@ header {
     
     .logo_name--hero {
         width: 260px;
+        margin-bottom: 0.5em;
     }
     
     .logo_sr { 
@@ -356,7 +357,32 @@ nav {
 
 header .social-flex { display: none; }
 
+header .phone-number {margin-left: 5px;}
 .phone-number { color: inherit; }
+
+.nav a,
+.social-flex ion-icon {
+    transition: color 250ms;
+}
+
+.nav a:focus,
+.social-flex ion-icon:focus,
+.nav a:hover,
+.social-flex ion-icon:hover,
+.nav a:active,
+.social-flex ion-icon:active {
+    color: var(--lightpurple);
+}
+
+.nav--hero a:focus,
+.social-flex--hero ion-icon:focus,
+.nav--hero a:hover,
+.social-flex--hero ion-icon:hover,
+.nav--hero a:active,
+.social-flex--hero ion-icon:active {
+    color: var(--bgpurple);
+}
+
 
 /*now add the nav*/
 @media (min-width: 700px) {
@@ -399,6 +425,7 @@ header .social-flex { display: none; }
 
 /*full desktop nav*/
 @media (min-width: 900px) {
+    
     header {
         flex-direction: row;
         justify-content: space-between;

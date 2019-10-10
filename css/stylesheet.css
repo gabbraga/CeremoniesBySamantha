@@ -155,13 +155,14 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: var(--bgpurple);
-    padding: 1em;
+    padding: 0.5em;
     width: 100%
 }
 
 .hero header {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     background-color: transparent;
 }
 
@@ -171,9 +172,10 @@ header {
 
 .logo {
     display: flex;
-    margin: 1em auto;
+    margin: 5px;
+    align-items: center;
     justify-content: center;
-    width: 100%;
+    width: max-content;
 }
 
 .logo--hero {
@@ -186,7 +188,14 @@ header {
 
 .logo_sr--hero {
     display: block;
-    width: 45px;
+    width: 36px;
+}
+
+.logo_group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
 }
 
 .logo_group--hero {
@@ -195,17 +204,17 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 0.5em;
+    margin: 0.5em 1rem;
     padding-right: 0;
 }
 
 .logo_name {
-    width: 150px;
+    width: 130px;
     margin: 0;
 }
 
 .logo_name--hero {
-    width: 220px;
+    width: 180px;
     margin-bottom: 0.5em;
 }
 
@@ -220,13 +229,14 @@ header {
     font-family: var(--headings);
     color: var(--darkpurple);
     text-transform: lowercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
     margin: 0;
     margin-left: 0.5em;
     padding: 0;
     min-width: max-content;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     line-height: 1;
+    margin-top: -4px;
 }
 
 .lcc--hero::before {
@@ -238,7 +248,7 @@ header {
     margin: 0;
     padding: 0;
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
@@ -249,7 +259,7 @@ header {
     }
     
     .logo_name {
-        width: 180px;
+        width: 160px;
     }
     
     .logo_name--hero {
@@ -259,7 +269,6 @@ header {
     .logo_sr { 
         display: block;
         width: 20px;
-        margin-right: 5px; 
     }    
     
     .logo_sr--hero { 
@@ -267,15 +276,44 @@ header {
         width: 50px;
     } 
     
+    .logo_group {
+        margin: 0.5rem 1.5rem;
+    }
+    
+    .logo_group--hero {
+        margin: 1rem 2rem;
+    }
+    
     .lcc::before { font-size: 1.4rem;}
     
     .lcc {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         letter-spacing: 0.6px;
     }
     
     .lcc--hero {
         font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 700px) {
+    .logo_sr {
+        margin-right: 5px;
+    }
+    
+    .logo_group {
+        margin: 0.5rem auto;
+    }
+    .logo {
+        margin-top: 1em;
+    }
+    
+    .logo_sr--hero {
+        width: 55px;
+    }
+    
+     .logo_group--hero {
+        margin: 1rem auto;
     }
 }
 
@@ -297,7 +335,7 @@ header {
     }
     
     .logo_sr { 
-        width: 30px;
+        width: 25px;
         margin-right: 10px; 
     } 
     
@@ -316,6 +354,23 @@ header {
 /*  NAVIGATION   */
 /****************/
 
+/*checkbox toggle is used for hamburger menu, always invisible*/
+#toggle {
+    display: none;
+}
+
+.ham-menu {
+    color: var(--darkpurple);
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0px;
+}
+
+.ham-menu--hero {
+    color: var(--lightpurple);
+    font-size: 1.5rem;
+}
+
 nav { 
     display: flex; 
     align-items: center;
@@ -332,7 +387,7 @@ nav {
     text-transform: lowercase;
     max-width: max-content;
     padding: 0;
-    margin: 1em;
+    margin: 0.5em;
 }
 
 .nav--header {
@@ -341,12 +396,28 @@ nav {
 
 .nav { display: none; }
 
+.nav--header li a {
+    color: var(--darkpurple);
+}
+
+.nav--hero li a {
+    color: var(--lightpurple);
+}
+
+.nav--hero li ion-icon {
+    color: var(--lightpurple);
+}
+
+.social-flex--hero li ion-icon {
+    color: var(--lightpurple);
+}
+
 .social-flex {
     list-style: none;
     display: flex;
     align-items: center;
     width: max-content;
-    margin: 0.5em;
+    margin: 1em;
 }
 
 .social-flex ion-icon {
@@ -364,6 +435,7 @@ header .phone-number {margin-left: 5px;}
 .social-flex ion-icon {
     transition: color 250ms;
 }
+
 
 .nav a:focus,
 .social-flex ion-icon:focus,
@@ -383,9 +455,46 @@ header .phone-number {margin-left: 5px;}
     color: var(--bgpurple);
 }
 
+#toggle:checked +nav {
+    flex-direction: column;
+}
 
-/*now add the nav*/
+#toggle:checked +nav .nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+#toggle:checked +nav .nav li {
+    margin: 5px;
+}
+
+#toggle:checked +nav .social-flex {
+    display: flex;
+    margin: 0;
+}
+
+@media (min-width: 500px) {
+     .ham-menu {
+        font-size: 1.2rem;
+    }
+    
+    .ham-menu--hero {
+        font-size: 1.8rem;
+    }
+}
+
+/*remove hamburger menu and add the nav*/
 @media (min-width: 700px) {
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ham-menu{
+        display: none;
+    }
+    
     .nav {
         display: flex;
         margin-right: 0;
@@ -420,6 +529,19 @@ header .phone-number {margin-left: 5px;}
     .nav--hero li,
     .social-flex--hero ion-icon {
         color: var(--lightpurple);
+    }
+    
+    #toggle:checked +nav {
+        flex-direction: row;
+        margin: 0.5em;
+    }
+
+    #toggle:checked +nav .nav {
+        flex-direction: row;   
+    }
+    
+    #toggle:checked +nav .nav li {
+        margin: 0.5em 0.6em;
     }
 }
 

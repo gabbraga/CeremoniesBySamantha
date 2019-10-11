@@ -158,7 +158,8 @@ header {
     justify-content: center;
     background-color: var(--bgpurple);
     padding: 0.5em;
-    width: 100%
+    width: 100%;
+    position: relative;
 }
 
 .hero header {
@@ -364,11 +365,15 @@ header {
     cursor: pointer;
     font-size: 1rem;
     margin: 0px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
 }
 
 .ham-menu--hero {
     color: var(--lightpurple);
     font-size: 1.5rem;
+    top: 25px;
 }
 
 nav { 
@@ -395,6 +400,11 @@ nav {
 }
 
 .nav { display: none; }
+
+.nav li:first-child {
+    display: flex;
+    align-items: center;
+}
 
 .nav--header li a {
     color: var(--darkpurple);
@@ -559,7 +569,7 @@ header .phone-number {margin-left: 5px;}
     }
     
     .logo_group {
-        align-items: flex-start;
+        align-items: center;
     }
     
     .nav--header {

@@ -1180,8 +1180,8 @@ section.hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
-    max-height: 400px;
+    height: 25vh;
+    max-height: 300px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/3hands.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1189,7 +1189,7 @@ section.hero {
 }
 
 .services h1 {
-    color: #fff;
+    color: rgba(255,255,255,0.9);
 }
 
 .unique p,
@@ -1199,7 +1199,8 @@ section.hero {
 .fees p {
     font-size: 0.9rem;
     padding: 0;
-    margin: 1em;
+    margin: 0.7em auto;
+    max-width: 500px;
 }
 
 .marriage-main,
@@ -1208,6 +1209,20 @@ section.hero {
 .fees>div {
     margin: 1em auto;
     max-width: 700px;
+}
+
+.unique h3,
+.marriage h3,
+.vow h3,
+.elope h3 {
+    text-align: left;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.unique h3 {
+    margin-top: 1em;
 }
 
 .marriage-icons {
@@ -1222,8 +1237,9 @@ section.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0.5em;
+    width: 100px;
 }
 
 .marriage-card img {
@@ -1246,28 +1262,36 @@ section.hero {
 }
 
 .services-img--vow {
-    width: 160px;
-    height: 160px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #bfbdcd;
+    border: 6px solid #bfbdcd;
+    margin: 1em;
 }
 
-@media (min-width: 800px) {
+.elope span {
+    color: var(--darkpurple);
+    font-weight: 700;
+}
+
+@media (min-width: 700px) {
     .unique p,
     .marriage-main>p,
     .vow p,
     .elope p,
     .fees p {
         font-size: 1rem;
+        max-width: 700px;
     }
     
     .unique h2,
-    .marriage-main h2,
+    .marriage h2,
     .vow h2,
     .elope h2,
     .fees h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin: 1em auto;
     }
     
     .vow-main {
@@ -1275,15 +1299,15 @@ section.hero {
         align-items: center;
     }
     
+    .unique h3,
+    .marriage h3,
     .vow-main h3 {
-        font-size: 1.3rem;
-        padding: 0 1rem 0;
+        font-size: 1.2rem;
+        max-width: 700px;
     }
     
     .services-img--vow {
-        width: 220px;
-        height: 220px;
-        border: 4px solid #bfbdcd;
+        margin: 0 2em;
     }
 }
 

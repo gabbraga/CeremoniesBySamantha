@@ -17,6 +17,8 @@ html {
     font-weight: 300;
     font-size: 16px;
     color: var(--main-text);
+    /*kevin powell recommended this so that when users click on the contact link it will scroll smoothly to the bottom of the page and they will be aware that they are on the homepage*/
+    /*scroll-behavior: smooth;*/
 }
 
 *,

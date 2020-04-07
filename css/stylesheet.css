@@ -150,6 +150,43 @@ a:visited {
 
 
 /****************************************/
+/*                NOTICE                */
+/***************************************/
+
+.notice {
+    /* 
+        When you don't have any notices, set display: none; 
+        When you want to show a notice, set display: flex;
+    */
+    display: flex;
+    justify-content: center;
+    background-color: var(--bgpurple);
+    padding: 1.5em;
+}
+
+.notice--info {
+    padding: 0;
+    margin: 0.5em;
+    text-align: justify;
+    color: var(--darkpurple);
+    font-size: 0.7rem;
+    line-height: 1.5;
+    max-width: 980px;
+}
+
+.notice--title {
+    font-weight: 700;
+}
+
+@media (min-width: 500px) {
+    .notice--info {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+
+/****************************************/
 /*                HEADER                */
 /***************************************/
 

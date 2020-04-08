@@ -13,6 +13,19 @@
 	</head>
     
 	<body>
+        <section class="notice purpleBG">
+            <p class="notice--info"><span class="notice--title">COVID-19</span>
+                 – At this time the measures in place for the pandemic, have 
+                 subsequently made service desks unavailable - you cannot get a 
+                 marriage license in Ontario. Until further notice, any weddings 
+                 planned for spring, summer and fall of 2020 should be considered 
+                 postponed and replanned for a new date. I am terribly sorry to 
+                 deliver this news, however I am still booking for winter and all of 2021.
+                 <br><br>
+                 In the meantime, I am available for virtual services such as vow renewal, 
+                 baby blessings, life celebrations and more.
+            </p>
+        </section>
         <header>
                 <div class="logo">
                     <img class="logo_sr" src="css/img/SR-dark.svg" alt="">
@@ -61,13 +74,13 @@
             </div>
         </section>
         
-        <section class="couple">
+        <section class="couple purpleBG">
             <h2>I would be honoured to bring your love together as a legally married couple.</h2>
             <p>I believe that the brand of love each couple shares is unique and its expression of union should be too. I want to help create the ceremony you have dreamed of. As personalized as it gets and edited by the absolute best – you. This is your ceremony and what I create with you will be as special, romantic, silly, warm, fun, or wild as you have always envisioned.</p>
         </section>
         
         <footer>
-            <p>Thank you for considering me as your officiant. It is my greatest honour to solemnize <span>your love, your way</span>.</p>
+            <p>Thank you for considering me as your officiant. It is my greatest honour to solemnize <span class="yourLove">your love, your way</span>.</p>
             
             <div class="footer-bottom">
                 
@@ -93,8 +106,8 @@
             
                 <!-- TODO use js to get the year -->
                 <div class="credits-flex">
-                    <small>&copy; Ceremonies by Samantha 2019</small>
-                    <small>Website designed by Gabriela Braga</small>
+                    <small>© Ceremonies by Samantha <span id="year"></span></small>
+                    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
                     <small>Illustrations courtesy of Madison Hiscock</small>
                 </div>
                 

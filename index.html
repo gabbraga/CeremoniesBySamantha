@@ -16,6 +16,19 @@
 	</head>
     
 	<body>
+        <section class="notice purpleBG">
+            <p class="notice--info"><span class="notice--title">COVID-19</span>
+                 – At this time the measures in place for the pandemic, have 
+                 subsequently made service desks unavailable - you cannot get a 
+                 marriage license in Ontario. Until further notice, any weddings 
+                 planned for spring, summer and fall of 2020 should be considered 
+                 postponed and replanned for a new date. I am terribly sorry to 
+                 deliver this news, however I am still booking for winter and all of 2021.
+                 <br><br>
+                 In the meantime, I am available for virtual services such as vow renewal, 
+                 baby blessings, life celebrations and more.
+            </p>
+        </section>
         
         <section class="hero">
             <header>
@@ -59,7 +72,7 @@
             </div>
         </section>
 			
-        <section class="celebrate">
+        <section class="celebrate purpleBG">
             <h2>Let's celebrate together</h2>
             <div class="celebrate-flex">
                 <img class="sam--pic" src="images/samantha.jpg" alt="Samantha Renaud portrait">
@@ -99,7 +112,7 @@
             <a href="services.html" class="button">Services</a>
         </section>
         
-        <section class="lifecycle">
+        <section class="lifecycle purpleBG">
             <h2>What is a Life-Cycle Celebrant<sup class="reg">&reg;</sup>?</h2>
             <div class="lifecycle-flex">
                 <a rel="noopener" href="http://www.celebrantinstitute.org" target="_blank">
@@ -113,7 +126,7 @@
                     <p>In Canada, certain requirements must be met to legally solemnize a marriage. With that said, I do in fact hold the title of <strong style="font-weight: 300;">metaphysical minister</strong>.</p>
                     <p>So what does that mean? My personal beliefs are in no way going to interfere in what you want.  Under the eyes of the government being married by me does count as a religious wedding. Metaphysics is a philosophy of being alive and is recognized as a religion.</p>
                     <p>My education and ministry title qualify me to perform all kinds of acts and rituals customizing them to you; as well as, interfaith ceremonies. However, it is important to note that there are some rites I cannot perform if they are a sacred act meant for a specific religion's clergy.</p>
-                    <p>Though I currently only offer marital services, in the near future I will be adding more services to serve you such as baby blessings and internment.</p>
+                    <p>I also offer baby blessings and internment.</p>
                 </div>
             </div>
         </section>
@@ -129,7 +142,7 @@
             </div>
         </section>
         
-        <section id="contact" class="contact">
+        <section id="contact" class="contact purpleBG">
             <h2>Looking for more information?</h2>
             <p>Contact me for inquiries, to request a quote, or to set up a free consulation to get to know one another and discuss ideas for your union.</p>
             <p><strong>If requesting a quote</strong>, please include as much information as possible.</p>
@@ -162,7 +175,7 @@
         </section>
         
 		<footer>
-            <p>Thank you for considering me as your officiant. It is my greatest honour to solemnize <span>your love, your way</span>.</p>
+            <p>Thank you for considering me as your officiant. It is my greatest honour to solemnize <span class="yourLove">your love, your way</span>.</p>
             
             <div class="footer-bottom">
                 
@@ -188,12 +201,37 @@
             
                 <!-- TODO use js to get the year -->
                 <div class="credits-flex">
-                    <small>&copy; Ceremonies by Samantha 2019</small>
+                    <small>© Ceremonies by Samantha <span id="year"></span></small>
+                    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
                     <small>Website designed by Gabriela Braga</small>
                     <small>Illustrations courtesy of Madison Hiscock</small>
                 </div>
             </div>
 		</footer>
+        
+        <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v5.0'
+          });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <!-- Your customer chat code -->
+        <div class="fb-customerchat" attribution=setup_tool page_id="100584747989935"
+                theme_color="#7646ff" logged_in_greeting="Hi! Happy to hear from you! " 
+                logged_out_greeting="Hi! Happy to hear from you! ">
+        </div>
 	
         <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </body>

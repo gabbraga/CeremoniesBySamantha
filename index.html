@@ -15,7 +15,7 @@
 	</head>
     
 	<body>
-        <section class="notice">
+        <section class="notice purpleBG">
             <p class="notice--info"><span class="notice--title">COVID-19</span>
                  – At this time the measures in place for the pandemic, have 
                  subsequently made service desks unavailable - you cannot get a 
@@ -27,7 +27,6 @@
                  In the meantime, I am available for virtual services such as vow renewal, 
                  baby blessings, life celebrations and more.
             </p>
-            
         </section>
         
         <section class="hero">
@@ -72,7 +71,7 @@
             </div>
         </section>
 			
-        <section class="celebrate">
+        <section class="celebrate purpleBG">
             <h2>Let's celebrate together</h2>
             <div class="celebrate-flex">
                 <img class="sam--pic" src="images/samantha.jpg" alt="Samantha Renaud portrait">
@@ -112,7 +111,7 @@
             <a href="services.html" class="button">Services</a>
         </section>
         
-        <section class="lifecycle">
+        <section class="lifecycle purpleBG">
             <h2>What is a Life-Cycle Celebrant<sup class="reg">&reg;</sup>?</h2>
             <div class="lifecycle-flex">
                 <a href="http://www.celebrantinstitute.org" target="_blank">
@@ -142,7 +141,7 @@
             </div>
         </section>
         
-        <section id="contact" class="contact">
+        <section id="contact" class="contact purpleBG">
             <h2>Looking for more information?</h2>
             <p>Contact me for inquiries, to request a quote, or to set up a free consulation to get to know one another and discuss ideas for your union.</p>
             <p><strong>If requesting a quote</strong>, please include as much information as possible.</p>
@@ -175,7 +174,7 @@
         </section>
         
 		<footer>
-            <p>Thank you for considering me as your officiant. It is my greatest honour to solemnize <span>your love, your way</span>.</p>
+            <p>Thank you for considering me as your officiant. It is my greatest honour to solemnize <span class="yourLove">your love, your way</span>.</p>
             
             <div class="footer-bottom">
                 
@@ -201,7 +200,8 @@
             
                 <!-- TODO use js to get the year -->
                 <div class="credits-flex">
-                    <small>&copy; Ceremonies by Samantha 2019</small>
+                    <small>© Ceremonies by Samantha <span id="year"></span></small>
+                    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
                     <small>Website designed by Gabriela Braga</small>
                     <small>Illustrations courtesy of Madison Hiscock</small>
                 </div>

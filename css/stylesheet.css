@@ -34,16 +34,9 @@ section {
     padding: 8vh 8vw 8vh 8vw;
 }
 
-.celebrate, 
-.lifecycle,
-.contact,
-.couple,
-.unique,
-.vow,
-.fees {
+.purpleBG {
     background-color: var(--bgpurple);
 }
-
 
 /************** */
 /* Body Text    */
@@ -55,10 +48,16 @@ body {
 }
 
 p {
+    font-size: 0.9rem;
     padding: 10px;
     text-align: left;
 }
 
+@media(min-width: 500px) {
+    p {
+        font-size: 1rem;
+    }
+}
 
 
 /* ****************** */
@@ -75,12 +74,12 @@ h1 {
     font-size: 1.8rem;
     font-weight: 200;
     text-align: center;
+    margin: 0.5em;
 }
 
 h2 {
     font-size: 1.3rem;
-    padding: 0.5em;
-    margin: 0 auto;
+    margin: 0.5em auto;
     margin-bottom: 0.5em;
     font-weight: 400;
     text-align: center;
@@ -88,30 +87,26 @@ h2 {
 
 h3 {
     font-size: 1rem;
-    padding: 0.5em;
     padding-bottom: 0;
     text-align: left;
+    margin: 0.5em;
 }
 
 @media (min-width: 800px) {
     h1 {
         font-size: 2rem;
-        padding: 0.5em;
     }
     
     h2 {
         font-size: 1.5rem;
-        padding: 0.5em;
         margin-bottom: 0;
     }
     
     h3 {
         font-size: 1.2rem;
-        padding: 0.5em;
         margin-bottom: 0;
     }
 }
-
 
 
 /* ****************** */
@@ -160,7 +155,7 @@ a:visited {
     */
     display: flex;
     justify-content: center;
-    background-color: var(--bgpurple);
+    background-color: var(--darkpurple);
     padding: 1.5em;
 }
 
@@ -168,7 +163,7 @@ a:visited {
     padding: 0;
     margin: 0.5em;
     text-align: justify;
-    color: var(--darkpurple);
+    color: var(--bgpurple);
     font-size: 0.7rem;
     line-height: 1.5;
     max-width: 980px;
@@ -625,7 +620,7 @@ header .phone-number {margin-left: 5px;}
     flex-direction: column;
     align-items: center;
     background-color: var(--main-text);
-    background-image: url(../images/marriage_register2.jpg);
+    background-image: url(../images/erric-jess-rings2.jpg);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
@@ -703,8 +698,6 @@ section.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    font-size: 0.9rem;
     margin: 1em auto;
     max-width: 400px;
 }
@@ -732,7 +725,6 @@ section.hero {
     }
     
     .celebrate p {
-        font-size: 1rem;
         margin: 2em 2em 0;
     }
     
@@ -864,7 +856,6 @@ section.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0.9rem;
 }
 
 .lifecycle-flex a {
@@ -918,7 +909,6 @@ section.hero {
         flex-direction: row;
         align-items: flex-start;
         justify-content: center;
-        font-size: 1rem;
     }
     
     .celebrant-logo-flex {
@@ -937,7 +927,6 @@ section.hero {
 }
 
 .wild p {
-    font-size: 0.9rem;
     max-width: 700px; 
     margin: 0 auto;
 }
@@ -959,11 +948,6 @@ section.hero {
 }
 
 @media (min-width: 500px) {
-    
-    .wild p {
-        font-size: 1rem;
-    }
-    
     .wild-icons>img {
         height: 150px;
         object-fit: contain;
@@ -981,7 +965,6 @@ section.hero {
 }
 
 .contact>p{
-    font-size: 0.9rem;
     max-width: 450px;
     margin: 0 auto;
 }
@@ -1069,7 +1052,6 @@ section.hero {
 @media (min-width: 800px) {
     
     .contact>p{
-        font-size: 1rem;
         max-width: 700px;
     }
     
@@ -1123,7 +1105,6 @@ section.hero {
 .portrait-flex-body {
     max-width: 500px;
     margin: 0 auto 2em;
-    font-size: 0.9rem;
 }
 
 .portrait img {
@@ -1150,7 +1131,6 @@ section.hero {
 }
 
 .couple p {
-    font-size: 0.9rem;
     margin: 0 auto;
 }
 
@@ -1161,31 +1141,16 @@ section.hero {
         margin: 1em auto 2em;
     }
     
-    .couple p {
-        max-width: 500px;
-    }
+    .couple p {max-width: 500px;}
 }
 
 @media (min-width: 700px) {
-    
-    .portrait-flex-body {
-        font-size: 1rem;
-    }
-    
-    .couple h2 {
-        font-size: 1.2rem;
-    }
-
-    .couple p {
-        font-size: 1rem;
-        max-width: 600px;
-    }
+    .couple h2 {font-size: 1.2rem;}
+    .couple p {max-width: 600px;}
 }
 
 @media (min-width: 900px)  {
-    .portrait img {
-        border: none;
-    }
+    .portrait img {border: none;}
     
     .portrait-flex {
         flex-direction: row;
@@ -1219,9 +1184,9 @@ section.hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 75vh;
-    max-height: 600px;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/erric-jess-rings2.jpg);
+    height: 50vh;
+    max-height: 400px;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/marriage_register2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1230,34 +1195,34 @@ section.hero {
 .services h1 {
     color: rgba(255,255,255,0.9);
 }
-
-.unique p,
-.marriage-main>p,
-.vow p,
-.elope p,
-.fees p {
+.service p {
     font-size: 0.9rem;
     padding: 0;
-    margin: 0.7em auto;
-    max-width: 500px;
+    margin: 0.75em auto;
 }
 
-.marriage-main,
-.unique>div,
-.vow-main,
-.fees>div {
+.service__desc,
+.service__container {
     margin: 1em auto;
-    max-width: 700px;
+    max-width: 800px;
 }
 
-.unique h3,
-.marriage h3,
-.vow h3,
-.elope h3 {
+.service__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service__container p {
+    padding: 0;
+    margin: 0.75em auto;
+}
+
+.service h3 {
     text-align: left;
     padding: 0;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: max-content;
+    margin: 0.5em auto 0.5em 0;
 }
 
 .unique h3 {
@@ -1293,20 +1258,14 @@ section.hero {
     padding: 0.5em;
 }
 
-.vow-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.services-img--vow {
-    width: 250px;
-    height: 250px;
+.service__img {
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid #bfbdcd;
-    margin: 1em;
+    margin: 0;
+    margin-top: 2rem;
 }
 
 .elope span {
@@ -1315,39 +1274,40 @@ section.hero {
 }
 
 @media (min-width: 700px) {
-    .unique p,
-    .marriage-main>p,
-    .vow p,
-    .elope p,
-    .fees p {
-        font-size: 1rem;
-        max-width: 700px;
-    }
+    .service p { font-size: 1rem;}
     
-    .unique h2,
-    .marriage h2,
-    .vow h2,
-    .elope h2,
-    .fees h2 {
+    .service h2 {
         font-size: 1.5rem;
         margin: 1em auto;
     }
-    
-    .vow-main {
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .unique h3,
-    .marriage h3,
-    .vow-main h3 {
+
+    .service h3 {
         font-size: 1.2rem;
         max-width: 700px;
     }
-    
-    .services-img--vow {
-        margin: 0 2em;
+
+    .service__container { 
+        flex-direction: row;
+        align-items: flex-start;
     }
+    .service__container--reverse { flex-direction: row-reverse;}
+    
+    .service__container
+    .service__container--reverse {
+        align-items: center;
+    }
+
+    .service__container p {
+        font-size: 1rem;
+    }
+
+    .service__img {
+        width: 320px;
+        height: 320px;
+    }
+    
+    .service__img-right { margin: 0 0 0 3rem;}
+    .service__img-left { margin: 0 3rem 0 0;}
 }
 
 /* ****************** */
@@ -1376,9 +1336,7 @@ footer small,
     color: rgba(242,240,245,0.9);
 }
 
-footer span {
-    color: var(--lightpurple);
-}
+.yourLove { color: var(--lightpurple);}
 
 .footer-bottom {
     display: flex;

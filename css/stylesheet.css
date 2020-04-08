@@ -703,8 +703,8 @@ section.hero {
 }
 
 .sam--pic {
-    width: 160px;
-    height: 160px;
+    min-width: 160px;
+    min-height: 160px;
     border-radius: 50%;
     padding: 0px;
     object-fit: cover;

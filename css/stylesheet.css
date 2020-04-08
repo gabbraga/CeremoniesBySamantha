@@ -1259,8 +1259,8 @@ section.hero {
 }
 
 .service__img {
-    width: 260px;
-    height: 260px;
+    min-width: 260px;
+    min-height: 260px;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid #bfbdcd;
@@ -1302,8 +1302,8 @@ section.hero {
     }
 
     .service__img {
-        width: 320px;
-        height: 320px;
+        min-width: 320px;
+        min-height: 320px;
     }
     
     .service__img-right { margin: 0 0 0 3rem;}
